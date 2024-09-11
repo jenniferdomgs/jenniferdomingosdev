@@ -7,11 +7,10 @@ function Header() {
       <nav className="container-nav">
         <img id="logo" src="" alt="Logo"/>
         <div className="menu">
-          <a href="#curiosidades">Curiosidades</a>
-          <a href="#causo">Causo</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#escolar">Histórico Escolar</a>
-          <a href="#contato">Contato</a>
+          <a href="#casa">Home</a>
+          <a href="#sobreMim">Sobre Mim</a>
+          <a href="#formacao">Formação</a>
+          <a href="#projetos">Projetos Realizados</a>
         </div>
       </nav>
       <div className="item-nav">
