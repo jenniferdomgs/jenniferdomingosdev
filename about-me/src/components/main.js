@@ -11,14 +11,14 @@ function Main() {
               <h1 id="SM">Sobre Mim</h1>
             </div>
             <div className="textosm">
-              <p>Meu nome é Jennifer Karoline da Silva Domingos, nasci no dia 03 de Agosto de 2005 (19 anos) e moro em Ceará-mirim/RN.</p>
-              <p>Sou acadêmica em Informática no <a id="if" href="https://portal.ifrn.edu.br/" target="_blank" rel="noreferrer">IFRN.</a></p>
-              <p>Além de estudar (que não é pouco), faço musculação e no tempo livre gosto de ler, assistir documentários que me despertem curiosidade, futebol e casos criminais.</p>
+              <p>Sou uma entusiasta da tecnologia, buscando  resolver conflitos por meio de inovações tecnológicas. Conto com uma  formação em Informática, pelo IFRN (Instituto Federal do Rio Grande do  Norte) e estudos voltados para o desenvolvimento de aplicações web. </p>
             </div>
           </div>
         </article>
       </section>
-      
+      <section id='formacao'>
+
+      </section>
     </main>
   );
 }
