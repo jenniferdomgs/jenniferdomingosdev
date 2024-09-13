@@ -23,16 +23,16 @@ function Header() {
         </ul>
         <p className="footer-text">Desenvolvido por <a href="#sobre">Jennifer</a></p>
       </nav>
-      <div className="hero-section" style={{
+      <div className="hero_section" style={{
         backgroundImage: `url(${backgroundHero})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         height: '100vh',
-        padding: '80px 20px',
+        padding: '80px 80px',
         color: '#fff',
         textAlign: 'center'
       }}>
