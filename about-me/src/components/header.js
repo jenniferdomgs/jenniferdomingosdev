@@ -3,15 +3,9 @@ import backgroundHero from '../img/background-hero.jpg';
 import perfilImage from '../img/perfil.jpg'; 
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <header className="header">
-      <nav className={`sidebar ${menuOpen ? 'active' : ''}`}>
+      <nav className='sidebar'>
         <div className="perfil-section">
           <img className="perfil-img" src={perfilImage} alt="Perfil" />
           <h2>Jennifer Domingos</h2>
@@ -56,10 +50,6 @@ function Header() {
           <p>Desenvolvedora Front-end</p>
         </div>
       </div>
-      {/* Menu Hamburguer */}
-      <button className="menu-toggle" onClick={toggleMenu}>
-        <i className="fas fa-bars"></i>
-      </button>
     </header>
   );
 }

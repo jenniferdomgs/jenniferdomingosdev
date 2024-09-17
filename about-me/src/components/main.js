@@ -15,17 +15,17 @@ function Main() {
           <h2>Sobre Mim</h2>
           <div className='line'></div>
         </div>
-        <div>
+        <div className='text-sobre'>
           <img className="iconsobre" src={IconSobre} alt="Sobre" />
+          <p>Sou uma entusiasta da tecnologia, buscando  resolver conflitos por meio de inovações tecnológicas. Conto com uma  formação em Informática, pelo IFRN (Instituto Federal do Rio Grande do  Norte) e estudos voltados para o desenvolvimento de aplicações web. </p>
         </div>
-        <p>Sou uma entusiasta da tecnologia, buscando  resolver conflitos por meio de inovações tecnológicas. Conto com uma  formação em Informática, pelo IFRN (Instituto Federal do Rio Grande do  Norte) e estudos voltados para o desenvolvimento de aplicações web. </p>
-        <div>
-          <img className="perf" src={html} alt="html" />
-          <img className="perfil-img" src={docker} alt="docker" />
-          <img className="perfil-img" src={react} alt="react" />
-          <img className="perfil-img" src={python} alt="python" />
-          <img className="perfil-img" src={mysql} alt="mysql" />
-          <img className="perfil-img" src={postgres} alt="postgres" />
+        <div className='cards'>
+          <div><img src={html} alt="html" /></div>
+          <div><img src={docker} alt="docker" /></div>
+          <div><img src={react} alt="react" /></div>
+          <div><img src={python} alt="python" /></div>
+          <div><img src={mysql} alt="mysql" /></div>
+          <div><img src={postgres} alt="postgres" /></div>
         </div>
       </section>
       <section>
