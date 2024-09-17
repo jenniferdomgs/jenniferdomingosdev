@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import backgroundHero from '../img/background-hero.jpg'; 
 import perfilImage from '../img/perfil.jpg'; 
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
-      <nav className="sidebar">
+      <nav className={`sidebar ${menuOpen ? 'active' : ''}`}>
         <div className="perfil-section">
           <img className="perfil-img" src={perfilImage} alt="Perfil" />
           <h2>Jennifer Domingos</h2>
@@ -21,7 +27,10 @@ function Header() {
           <li><a href="#formacao"><i className="fas fa-graduation-cap"></i> Formação</a></li>
           <li><a href="#projetos"><i className="fas fa-folder-open"></i> Projetos Realizados</a></li>
         </ul>
-        <p className="footer-text">Desenvolvido por <a href="#sobre">Jennifer</a></p>
+        <div className="footer-text">
+          <p>© Copyright <strong>Portfólio Jennifer</strong></p>
+          <p>Desenvolvido por <a href="#sobre">Jennifer</a></p>
+        </div>
       </nav>
       <div className="hero_section" style={{
         backgroundImage: `url(${backgroundHero})`,
@@ -47,6 +56,10 @@ function Header() {
           <p>Desenvolvedora Front-end</p>
         </div>
       </div>
+      {/* Menu Hamburguer */}
+      <button className="menu-toggle" onClick={toggleMenu}>
+        <i className="fas fa-bars"></i>
+      </button>
     </header>
   );
 }
