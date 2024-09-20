@@ -26,32 +26,32 @@ Esta aplicação foi projetada com o objetivo principal de apresentar informaç�
 
    ```bash
    $ git clone https://github.com/jenniferdomgs/about-me.git
-   `
+   
 2.Navegue até a pasta do projeto   
 
-   ```bash
+   ``bash
    $ cd about-me
-```
+´´
 
 3.Instale as dependências
 
-   '''bash
+   ``bash
    $ npm install
-   `
+   ´´
 
 4.Inicie a aplicação
-   '''bash
+   ``bash
 
    $ npm start
-``
+´´
 
 ##Estrutura do Projeto
 
 about-me/
-│
-├── src/
-├── public/
-├── package.json
+│<br>
+├── src/<br>
+├── public/<br>
+├── package.json<br>
 └── README.md
 
 ##Tecnologias Utilizadas
