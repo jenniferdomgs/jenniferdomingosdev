@@ -3,9 +3,20 @@ import backgroundHero from '../img/background-hero.jpg';
 import perfilImage from '../img/perfil.jpg'; 
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(prev => !prev);
+  };
+
   return (
-    <header className="header">
-      <nav className='sidebar'>
+    <header className="header" id='home'>
+      <div className="hamburger-menu" onClick={toggleSidebar}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="perfil-section">
           <img className="perfil-img" src={perfilImage} alt="Perfil" />
           <h2>Jennifer Domingos</h2>
@@ -27,29 +38,30 @@ function Header() {
         </div>
       </nav>
       <div className="hero_section" style={{
-        backgroundImage: `url(${backgroundHero})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        height: '100vh',
-        padding: '80px 80px',
-        color: '#fff',
-        textAlign: 'center'
-      }}>
-        <h1>Jennifer Karoline da Silva Domingos</h1>
-        <div className="role">
-          <div className="line" style={{
-            width: '4px',
-            height: '30px',
-            backgroundColor: '#ff0077',
-            margin: '10px 0'
-          }}></div>
-          <p>Desenvolvedora Front-end</p>
-        </div>
+      backgroundImage: `url(${backgroundHero})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      height: '100vh',
+      padding: '80px',
+      color: '#fff',
+      textAlign: 'center'
+    }}>
+    <h1>Jennifer Karoline da Silva Domingos</h1> 
+    <div className="role">
+      <div className="line" style={{
+        width: '4px',
+        height: '30px',
+        backgroundColor: '#ff0077',
+        margin: '10px 0'
+      }}></div>
+      <p>Desenvolvedora Front-end</p> 
       </div>
+    </div>
+
     </header>
   );
 }

@@ -28,8 +28,25 @@ function Main() {
           <div><img src={postgres} alt="postgres" /></div>
         </div>
       </section>
-      <section>
-        
+      <section id='formacao'>
+        <div>
+          <h2>Formação Acadêmica</h2>
+          <div className='line'></div>
+        </div>
+        <div className='text-formacao'>
+          <h3>INFORMÁTICA</h3>
+          <ul>
+            <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
+          </ul>
+          <p className='ano'>2021 - 2025</p>
+          <p>O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais, seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.</p>
+        </div>
+      </section>
+      <section id='projetos'>
+        <div>
+          <h2>Projetos</h2>
+          <div className='line'></div>
+        </div>
       </section>
     </main>
   );
