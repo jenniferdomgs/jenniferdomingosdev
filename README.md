@@ -40,7 +40,7 @@ Projeto desenvolvido como um Portfólio Pessoal.
 
 4. Inicie a aplicação
 ```bash
-      $ npm install
+      $ npm start
 ```
     
 ## Tecnologias Utilizadas
