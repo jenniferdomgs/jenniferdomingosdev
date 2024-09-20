@@ -1,65 +1,53 @@
-# About - Jennifer Domingos
+
 > Status: Developing ⚠️
+## About - Jennifer Domingos
 
 ![Captura de tela de 2024-09-19 23-37-31](https://github.com/user-attachments/assets/3a50aa7b-405e-435b-bffb-a1fb1f4a9dcf)
 
-Projeto desenvolvido como um portfólio pessoal.
+Projeto desenvolvido como um Portfólio Pessoal.
 
-## Descrição
-
-Esta aplicação foi projetada com o objetivo principal de apresentar informações sobre mim, minhas habilidades e projetos, facilitando o compartilhamento do meu trabalho e experiências profissionais.
 
 ## Funcionalidades
+
 
 - Interface responsiva para visualização em dispositivos móveis e desktop;
 - Seção "Sobre Mim" com informações pessoais e profissionais;
 - Exibição de tecnologias e habilidades com ícones.
 
-## Começando
 
 ### Pré-requisitos
 
 - Node.js (versão 14 ou superior)
 - npm (geralmente já instalado com o Node.js)
 
-1. Clone o repositório
+## Instalação
 
-   ```bash
-   $ git clone https://github.com/jenniferdomgs/about-me.git
-   
-2.Navegue até a pasta do projeto   
+    1. Clone o repositório
 
-   ``bash
-   $ cd about-me
-´´
+```bash
+     $ git clone https://github.com/jenniferdomgs/about-me.git
+```
 
-3.Instale as dependências
+    2. Navegue até a pasta do projeto  
+```bash
+      $ cd about-me
+```
 
-   ``bash
-   $ npm install
-   ´´
+    3. Instale as dependências
+```bash
+      $ npm install
+```
 
-4.Inicie a aplicação
-   ``bash
+    4. Inicie a aplicação
+```bash
+      $ npm install
+```
+    
+## Tecnologias Utilizadas
 
-   $ npm start
-´´
-
-##Estrutura do Projeto
-
-about-me/
-│<br>
-├── src/<br>
-├── public/<br>
-├── package.json<br>
-└── README.md
-
-##Tecnologias Utilizadas
-
-- React
+- REACT
 - HTML
 - CSS
 
-##Autoria Própria
-
-<ul><li><a href="https://github.com/jenniferdomgs">@JenniferDomingos<a/></li></ul>
+## Autoria Própria
+- [@jenniferdomingos](https://www.github.com/jenniferdomgs)
