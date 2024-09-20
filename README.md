@@ -22,23 +22,23 @@ Projeto desenvolvido como um Portfólio Pessoal.
 
 ## Instalação
 
-    1. Clone o repositório
+1. Clone o repositório
 
 ```bash
      $ git clone https://github.com/jenniferdomgs/about-me.git
 ```
 
-    2. Navegue até a pasta do projeto  
+2. Navegue até a pasta do projeto  
 ```bash
       $ cd about-me
 ```
 
-    3. Instale as dependências
+3. Instale as dependências
 ```bash
       $ npm install
 ```
 
-    4. Inicie a aplicação
+4. Inicie a aplicação
 ```bash
       $ npm install
 ```
