@@ -3,20 +3,33 @@
 
 ![Captura de tela de 2024-09-19 23-37-31](https://github.com/user-attachments/assets/3a50aa7b-405e-435b-bffb-a1fb1f4a9dcf)
 
-Este projeto é uma aplicação React chamada "about-me". Ele serve como um portfólio pessoal, apresentando informações sobre mim e minhas habilidades.
+Projeto desenvolvido como um portfólio pessoal.
 
-## Pré-requisitos
+## Descrição
 
-Antes de rodar o projeto, certifique-se de que você tem os seguintes itens instalados:
+Esta aplicação foi projetada com o objetivo principal de apresentar informações sobre mim, minhas habilidades e projetos, facilitando o compartilhamento do meu trabalho e experiências profissionais.
 
-- [Node.js](https://nodejs.org/) (versão 14+)
-- [npm](https://www.npmjs.com/) (geralmente já instalado com o Node.js)
+## Funcionalidades
 
-## Como rodar o projeto localmente
+- Interface responsiva para visualização em dispositivos móveis e desktop;
+- Seção "Sobre Mim" com informações pessoais e profissionais;
+- Exibição de tecnologias e habilidades com ícones.
 
-1. **Clone o repositório**
+## Começando
 
-   Primeiro, clone o repositório do projeto para sua máquina local:
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- npm (geralmente já instalado com o Node.js)
+
+1. Clone o repositório
 
    ```bash
-   git clone https://github.com/jenniferdomgs/about-me.git
+   $ git clone https://github.com/jenniferdomgs/about-me.git
+2.Navegue até a pasta do projeto   
+
+   ```bash
+   $ cd about-me
+
+
+
