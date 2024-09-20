@@ -1,3 +1,5 @@
+markdown
+
 # About - Jennifer Domingos
 > Status: Developing ⚠️
 
@@ -22,27 +24,36 @@ Esta aplicação foi projetada com o objetivo principal de apresentar informaç�
 - Node.js (versão 14 ou superior)
 - npm (geralmente já instalado com o Node.js)
 
+### Passos para instalação
+
 1. Clone o repositório
 
    ```bash
    $ git clone https://github.com/jenniferdomgs/about-me.git
-   
-2.Navegue até a pasta do projeto   
 
-   ```bash
-   $ cd about-me
+    Navegue até a pasta do projeto
 
-3.Instale as dependências
+    bash
 
-   '''bash
-   $ npm install
+$ cd about-me
 
-4.Inicie a aplicação
-   '''bash
+Instale as dependências
 
-   $ npm start
+bash
 
-##Estrutura do Projeto
+$ npm install
+
+Inicie a aplicação
+
+bash
+
+    $ npm start
+
+    Isso abrirá o navegador padrão e a aplicação será acessível em http://localhost:3000.
+
+Estrutura do Projeto
+
+java
 
 about-me/
 │
@@ -51,11 +62,12 @@ about-me/
 ├── package.json
 └── README.md
 
-##Tecnologias Utilizadas
+Tecnologias Utilizadas
 
-- React
-- HTML
-- CSS
+    React
+    HTML
+    CSS
 
-##Autoria Própria
+Autoria Própria
 
+    @jenniferdomgs
