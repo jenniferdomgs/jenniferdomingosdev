@@ -43,7 +43,7 @@ function Main() {
           <ul>
             <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
           </ul>
-          <p className="ano">2021 - 2025</p>
+          <p className="ano">Abril 2021 - Janeiro 2025</p>
           <p>
             O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais,
             seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados
@@ -90,9 +90,9 @@ function Main() {
           <ul>
             <li>DTIC/PMRN - Diretoria de Tecnologia, Inovação e Comunicação da Polícia Militar do Rio Grande do Norte</li>
           </ul>
-          <p className="ano">Maio de 2024 - Janeiro de 2025 · 8 meses</p>
+          <p className="ano">Maio 2024 - Janeiro 2025 · 8 meses</p>
           <p>
-            texto
+          Desenvolve sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Atua na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. Planeja etapas de trabalho com foco na integração entre sistemas e eficiência operacional.
           </p>
         </div>
       </section>

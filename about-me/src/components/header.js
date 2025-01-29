@@ -50,7 +50,7 @@ function Header() {
       color: '#fff',
       textAlign: 'center'
     }}>
-    <h1>Jennifer Karoline da Silva Domingos</h1> 
+    <h1>Jennifer Domingos</h1> 
     <div className="role">
       <div className="line" style={{
         width: '4px',
