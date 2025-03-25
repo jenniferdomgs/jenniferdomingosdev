@@ -58,7 +58,7 @@ function Header() {
         backgroundColor: '#ff0077',
         margin: '10px 0'
       }}></div>
-      <p>Desenvolvedora Front-end</p> 
+      <p>Desenvolvedora de Software</p> 
       </div>
     </div>
 

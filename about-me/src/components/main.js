@@ -39,7 +39,7 @@ function Main() {
           <div className="line"></div>
         </div>
         <div className="text-formacao">
-          <h3>INFORMÁTICA</h3>
+          <h3>TÉCNICA EM INFORMÁTICA</h3>
           <ul>
             <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
           </ul>
@@ -49,6 +49,12 @@ function Main() {
             seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados
             e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.
           </p>
+          <h3>GRADUANDA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
+          <ul>
+            <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
+          </ul>
+          <p className="ano">mês 2025 - mês 2028</p>
+          <p>O profissional formado em Análise e Desenvolvimento de Sistemas analisa pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
         </div>
       </section>
       <section id="certificados">
@@ -86,13 +92,21 @@ function Main() {
           <div className="line"></div>
         </div>
         <div className="text-formacao">
-          <h3>ALUNA PESQUISADORA - DESENVOLVIMENTO</h3>
+          <h3>Aluna Pesquisadora - Desenvolvimento</h3>
           <ul>
             <li>DTIC/PMRN - Diretoria de Tecnologia, Inovação e Comunicação da Polícia Militar do Rio Grande do Norte</li>
           </ul>
           <p className="ano">Maio 2024 - Janeiro 2025 · 8 meses</p>
           <p>
           Desenvolve sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Atua na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. Planeja etapas de trabalho com foco na integração entre sistemas e eficiência operacional.
+          </p>
+          <h3>Finalista - Hackathon de Tecnologia em Segurança Pública</h3>
+          <ul>
+            <li>MJSP - Ministério da Justiça e Segurança Pública</li>
+          </ul>
+          <p className="ano">Março de 2025</p>
+          <p>
+          Fui finalista do primeiro hackathon promovido pelo MJSP, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.
           </p>
         </div>
       </section>
