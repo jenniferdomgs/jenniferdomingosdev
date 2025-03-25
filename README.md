@@ -2,7 +2,7 @@
 > Status: Developing ⚠️
 ## About - Jennifer Domingos
 
-![Captura de tela de 2024-09-19 23-37-31](https://github.com/user-attachments/assets/3a50aa7b-405e-435b-bffb-a1fb1f4a9dcf)
+![image](https://github.com/user-attachments/assets/fdba125c-fba2-4143-b6b9-d911e167ad05)
 
 Projeto desenvolvido como um Portfólio Pessoal.
 
