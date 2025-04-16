@@ -7,6 +7,9 @@ import python from '../img/python.png';
 import react from '../img/react.png';
 import html from '../img/html.png';
 import logoCisco from '../img/Cisco_academy_logo.png';
+import emergencIA from '../img/emergencIA.jpg';
+import { Link } from 'react-router-dom';
+
 
 function Main() {
   return (
@@ -19,9 +22,8 @@ function Main() {
         <div className="text-sobre">
           <img className="iconsobre" src={IconSobre} alt="Sobre" />
           <p>
-            Sou uma entusiasta da tecnologia, buscando resolver conflitos por meio de inovações tecnológicas.
-            Conto com uma formação em Informática, pelo IFRN (Instituto Federal do Rio Grande do Norte) e estudos
-            voltados para o desenvolvimento de aplicações web.
+              Olá! Meu nome é Jennifer, mas você pode me chamar de Jenni. <br></br><br></br>
+              Sou técnica em Informática pelo IFRN e atualmente estou cursando Análise e Desenvolvimento de Sistemas na mesma instituição. A tecnologia é minha paixão, e a cada dia me sinto mais motivada a explorar suas infinitas possibilidades, especialmente quando se trata de resolver problemas e conflitos.
           </p>
         </div>
         <div className="cards">
@@ -54,7 +56,7 @@ function Main() {
             <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
           </ul>
           <p className="ano">mês 2025 - mês 2028</p>
-          <p>O profissional formado em Análise e Desenvolvimento de Sistemas analisa pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
+          <p>O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
         </div>
       </section>
       <section id="certificados">
@@ -114,6 +116,17 @@ function Main() {
         <div>
           <h2>Projetos</h2>
           <div className="line"></div>
+        </div>
+        <div className="cards-projetos">
+          <div className="card-projeto">
+            <img src={emergencIA} alt="Projeto EmergêncIA" />
+            <h3>EmergêncIA</h3>
+            <div className="card-buttons">
+              <a href="https://github.com/EmergencIA-hackathon" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+              <Link to="/projeto1" className="botao-detalhes">+</Link>
+            </div>
+
+          </div>
         </div>
       </section>
     </main>

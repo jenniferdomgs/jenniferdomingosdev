@@ -95,12 +95,10 @@ html, body {
   transition: background-color 0.3s;
 }
 
-.nav-links li a:hover {
-  background-color: #f0f0f0;
-  i {
-    color: #ff0077;
-  }
+.nav-links li a:hover i {
+  color: #ff0077;
 }
+
 
 
 .footer-text {
@@ -389,10 +387,77 @@ main {
 
 .card-certificado p {
   font-size: 14px;
-  color: #666;
-  margin: 0;
+  color: #333;
 }
 
+
+
+.cards-projetos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-projeto {
+  background-color: #00000075;
+  border-radius: 16px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.card-projeto:hover {
+  transform: scale(1.03);
+}
+
+.card-projeto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-projeto h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.projeto-detalhe-img {
+  width: 100%;
+  max-width: 800px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.card-buttons a {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.card-buttons a:hover {
+  background-color: #0077cc;
+}
 
 
 @media (max-width: 768px) {
@@ -484,5 +549,14 @@ main {
   .perfil-section {
     display: flex;
     flex-direction: column;
+  }
+
+  .cards-projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-projeto {
+    width: 90%;
   }
 }
