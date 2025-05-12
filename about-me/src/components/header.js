@@ -1,16 +1,46 @@
-import React, { useState } from 'react';
-import backgroundHero from '../img/background-hero.jpg'; 
-import perfilImage from '../img/perfil.jpg'; 
+import React, { useState, useEffect } from 'react';
+import backgroundHero from '../img/background-hero.jpg';
+import perfilImage from '../img/perfil.jpg';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [displayedName, setDisplayedName] = useState('');
+  const [displayedTitle, setDisplayedTitle] = useState('');
+
+  const fullName = 'Jennifer Domingos';
+  const fullTitle = 'Desenvolvedora de Software';
+
+  useEffect(() => {
+    let nameIndex = 0;
+    let titleIndex = 0;
+
+    const typeName = () => {
+      if (nameIndex <= fullName.length) {
+        setDisplayedName(fullName.slice(0, nameIndex));
+        nameIndex++;
+        setTimeout(typeName, 120);
+      } else {
+        setTimeout(typeTitle, 500);
+      }
+    };
+
+    const typeTitle = () => {
+      if (titleIndex <= fullTitle.length) {
+        setDisplayedTitle(fullTitle.slice(0, titleIndex));
+        titleIndex++;
+        setTimeout(typeTitle, 80);
+      }
+    };
+
+    typeName();
+  }, []);
 
   const toggleSidebar = () => {
     setIsOpen(prev => !prev);
   };
 
   return (
-    <header className="header" id='home'>
+    <header className="header" id="home">
       <div className="hamburger-menu" onClick={toggleSidebar}>
         <div></div>
         <div></div>
@@ -38,30 +68,31 @@ function Header() {
         </div>
       </nav>
       <div className="hero_section" style={{
-      backgroundImage: `url(${backgroundHero})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      height: '100vh',
-      padding: '80px',
-      color: '#fff',
-      textAlign: 'center'
-    }}>
-    <h1>Jennifer Domingos</h1> 
-    <div className="role">
-      <div className="line" style={{
-        width: '4px',
-        height: '30px',
-        backgroundColor: '#ff0077',
-        margin: '10px 0'
-      }}></div>
-      <p>Desenvolvedora de Software</p> 
+        backgroundImage: `url(${backgroundHero})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        height: '100vh',
+        padding: '80px',
+        color: '#fff',
+        textAlign: 'center'
+      }}>
+        <h1 style={{ fontSize: '40px', paddingLeft: '20px' }}>
+          {displayedName}<span className="cursor">|</span>
+        </h1>
+        <div className="role">
+          <div className="line" style={{
+            width: '4px',
+            height: '30px',
+            backgroundColor: '#ff0077',
+            margin: '10px 0'
+          }}></div>
+          <p style={{ fontSize: '32px', margin: 0 }}>{displayedTitle}</p>
+        </div>
       </div>
-    </div>
-
     </header>
   );
 }

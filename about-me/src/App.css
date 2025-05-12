@@ -186,7 +186,7 @@ main {
 }
 
 #sobre .iconsobre {
-  height: 250px;
+  height: 300px;
   margin-right: 20px;
   float: left;
 }
@@ -204,31 +204,73 @@ main {
   margin-top: 0;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 40px;
+.cards-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
-  margin-left: 50px;
+  width: 100%;
 }
 
-.cards div {
+.cards-container {
+  overflow-x: auto;
+  max-width: 90%;
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+.cards-horizontal {
+  display: flex;
+  gap: 20px;
+  min-width: max-content;
+  padding: 20px 0;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cards-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: #BB1DBE;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.scroll-button.left {
+  left: 0;
+}
+
+.scroll-button.right {
+  right: 0;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 150px;
   background-color: white;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 180px;
-  border-radius: 10px;
 }
 
-.cards div img {
+.card img {
   max-width: 100px;
   max-height: 100px;
-}
-
-.cards div:hover {
-  box-shadow: 5px 5px 5px 5px #BB1DBE;
 }
 
 #formacao {
@@ -458,6 +500,19 @@ main {
 .card-buttons a:hover {
   background-color: #0077cc;
 }
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 
 
 @media (max-width: 768px) {
