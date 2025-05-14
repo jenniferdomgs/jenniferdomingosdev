@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import IconSobre from '../img/icon-sobre.png';
 import docker from '../img/docker.png';
 import mysql from '../img/mysql.png';
@@ -11,10 +11,12 @@ import git from '../img/git.png';
 import logoCisco from '../img/Cisco_academy_logo.png';
 import emergencIA from '../img/emergencIA.jpg';
 import hackathon from '../img/mjsp.jpg';
-import { Link } from 'react-router-dom';
+import emergencIAT1 from '../img/emergencIA2.jpg';
+import emergencIAT2 from '../img/emergencIA1.jpg';
 
 function Main() {
   const scrollRef = useRef(null);
+  const [projetoAberto, setProjetoAberto] = useState(false); 
 
   const scroll = (direction) => {
     const { current } = scrollRef;
@@ -35,32 +37,29 @@ function Main() {
           <div className="line"></div>
         </div>
         <div className="text-sobre">
-          <img className="iconsobre" src={IconSobre} alt="Sobre" />
+          <img className="iconsobre" src={IconSobre} alt="Sobre"/>
           <p>
-              Olá! Meu nome é Jennifer, mas você pode me chamar de Jenni. <br /><br />
-              Sou técnica em Informática pelo IFRN e atualmente estou cursando Análise e Desenvolvimento de Sistemas na mesma instituição. A tecnologia é minha paixão, e a cada dia me sinto mais motivada a explorar suas infinitas possibilidades, especialmente quando se trata de resolver problemas e conflitos.
+            Olá! Meu nome é Jennifer, mas você pode me chamar de Jenni. <br /><br />
+            Sou técnica em Informática pelo IFRN e atualmente estou cursando Análise e Desenvolvimento de Sistemas na mesma instituição. A tecnologia é minha paixão, e a cada dia me sinto mais motivada a explorar suas infinitas possibilidades, especialmente quando se trata de resolver problemas e conflitos.
           </p>
         </div>
 
         <div className="cards-wrapper">
-        <button className="scroll-button left" onClick={() => scroll('left')}>&lt;</button>
-        
-        <div className="cards-container" ref={scrollRef}>
-          <div className="cards-horizontal">
-            <div className="card"><img src={html} alt="html" /></div>
-            <div className="card"><img src={docker} alt="docker" /></div>
-            <div className="card"><img src={react} alt="react" /></div>
-            <div className="card"><img src={python} alt="python" /></div>
-            <div className="card"><img src={mysql} alt="mysql" /></div>
-            <div className="card"><img src={postgres} alt="postgres" /></div>
-            <div className="card"><img src={node} alt="node.js" /></div>
-            <div className="card"><img src={git} alt="git" /></div>
+          <button className="scroll-button left" onClick={() => scroll('left')}>&lt;</button>
+          <div className="cards-container" ref={scrollRef}>
+            <div className="cards-horizontal">
+              <div className="card" title='HTML, CSS e Java Script'><img src={html} alt="html" /></div>
+              <div className="card" title='Docker'><img src={docker} alt="docker" /></div>
+              <div className="card" title='React'><img src={react} alt="react" /></div>
+              <div className="card" title='Python'><img src={python} alt="python" /></div>
+              <div className="card" title='MySQL'><img src={mysql} alt="mysql" /></div>
+              <div className="card" title='PostgreSQL'><img src={postgres} alt="postgres" /></div>
+              <div className="card" title="Node JS"><img src={node} alt="node.js" /></div>
+              <div className="card" title="Git"><img src={git} alt="git" /></div>
+            </div>
           </div>
+          <button className="scroll-button right" onClick={() => scroll('right')}>&gt;</button>
         </div>
-
-        <button className="scroll-button right" onClick={() => scroll('right')}>&gt;</button>
-      </div>
-
       </section>
 
       <section id="formacao">
@@ -69,22 +68,24 @@ function Main() {
           <div className="line"></div>
         </div>
         <div className="text-formacao">
-          <h3>TÉCNICA EM INFORMÁTICA</h3>
+          <h3>Técnica em Informática</h3>
           <ul>
             <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
           </ul>
           <p className="ano">Abril 2021 - Janeiro 2025</p>
           <p>
-            O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais,
+          O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais,
             seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados
             e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.
           </p>
-          <h3>GRADUANDA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
+          <h3>Graduanda em Análise e Desenvolvimento de Sistemas</h3>
           <ul>
             <li>IFRN - Instituto Federal do Rio Grande do Norte</li>
           </ul>
           <p className="ano">mês 2025 - mês 2028</p>
-          <p>O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
+          <p>
+          O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.
+          </p>
         </div>
       </section>
 
@@ -137,7 +138,7 @@ function Main() {
           </ul>
           <p className="ano">Maio 2024 - Janeiro 2025 · 8 meses</p>
           <p>
-            Desenvolve sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Atua na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. Planeja etapas de trabalho com foco na integração entre sistemas e eficiência operacional.
+          Desenvolve sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Atua na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. Planeja etapas de trabalho com foco na integração entre sistemas e eficiência operacional.
           </p>
           <h3>Finalista - Hackathon de Tecnologia em Segurança Pública</h3>
           <ul>
@@ -145,14 +146,14 @@ function Main() {
           </ul>
           <p className="ano">Março de 2025</p>
           <p>
-            Fui finalista do primeiro hackathon promovido pelo MJSP, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.
+          Fui finalista do primeiro hackathon promovido pelo MJSP, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.
           </p>
         </div>
       </section>
 
       <section id="projetos">
         <div>
-          <h2>Projetos</h2>
+          <h2>Projetos Realizados</h2>
           <div className="line"></div>
         </div>
         <div className="cards-projetos">
@@ -161,11 +162,40 @@ function Main() {
             <h3>EmergêncIA</h3>
             <div className="card-buttons">
               <a href="https://github.com/EmergencIA-hackathon/EmergencIA" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
-              <Link to="/projeto1" className="botao-detalhes">+</Link>
+              <button className="botao-detalhes" onClick={() => setProjetoAberto(true)}>+</button>
             </div>
           </div>
         </div>
       </section>
+
+      
+      {projetoAberto && (
+        <div className="modal-projeto">
+          <div className="conteudo-projeto estilo-formulario">
+            <button className="fechar-modal" onClick={() => setProjetoAberto(false)}>X</button>
+            
+            <h3 className="titulo-detalhe">EmergêncIA: Chatbot para Registro de Ocorrências</h3>
+            
+            <div className="imagens-projeto">
+              
+              <img src={emergencIAT2} alt="EmergêncIA on Telegram" />
+              <img src={emergencIAT1} alt="EmergêncIA on Telegram" />
+              
+            </div>
+            
+            <div className="tecnologias-projeto">
+              <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>Telegram Bot API</li>
+                <li>Node.Js</li>
+                <li>Docker</li>
+                <li>Ngrok</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

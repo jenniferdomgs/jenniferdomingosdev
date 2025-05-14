@@ -12,7 +12,6 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .sidebar {
@@ -432,8 +431,6 @@ main {
   color: #333;
 }
 
-
-
 .cards-projetos {
   display: flex;
   justify-content: space-between;
@@ -443,7 +440,7 @@ main {
 }
 
 .card-projeto {
-  background-color: #00000075;
+  background-color: #fff;
   border-radius: 16px;
   padding: 20px;
   width: 30%;
@@ -465,7 +462,7 @@ main {
 }
 
 .card-projeto h3 {
-  color: #fff;
+  color: #222;
   margin-bottom: 10px;
 }
 
@@ -478,7 +475,6 @@ main {
   display: block;
   margin: 0 auto;
 }
-
 
 .card-buttons {
   display: flex;
@@ -501,11 +497,23 @@ main {
   background-color: #0077cc;
 }
 
+.card-buttons .botao-detalhes {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.botao-detalhes:hover {
+  background-color: #0077cc;
+}
 .cursor {
   display: inline-block;
   width: 1ch;
   animation: blink 1s steps(2, start) infinite;
 }
+
 
 @keyframes blink {
   to {
@@ -513,6 +521,85 @@ main {
   }
 }
 
+.modal-projeto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color:#081C34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.conteudo-projeto {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.titulo-detalhe {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.imagens-projeto {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.imagens-projeto img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.tecnologias-projeto {
+  text-align: center;
+}
+
+.tecnologias-projeto ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tecnologias-projeto li {
+  background: #081C34;
+  color:#fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
 
 @media (max-width: 768px) {

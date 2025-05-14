@@ -54,6 +54,7 @@ function Header() {
             <a href="https://instagram.com/jenniferdmgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
             <a href="https://github.com/jenniferdomgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/jennifer-domingos-061897328" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+            <a href="mailto:jenniferdomgs@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
           </div>
         </div>
         <ul className="nav-links">

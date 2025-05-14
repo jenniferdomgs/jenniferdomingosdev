@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Main from './components/main';
 
-import Projeto1 from './pages/projeto1';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/projeto1" element={<Projeto1 />} />
       </Routes>
     </Router>
   );
