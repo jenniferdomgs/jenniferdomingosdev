@@ -13,6 +13,12 @@ import emergencIA from '../img/emergencIA.jpg';
 import hackathon from '../img/mjsp.jpg';
 import emergencIAT1 from '../img/emergencIA2.jpg';
 import emergencIAT2 from '../img/emergencIA1.jpg';
+import arteTintasThumb from '../img/hero.png';
+import arteTintasDesk2 from '../img/sobre.png';
+import arteTintasMob1 from '../img/hero-responsivo.png';
+import arteTintasMob2 from '../img/responsivo.png';
+import icon from '../img/icon.png'
+
 
 function Main() {
   const scrollRef = useRef(null);
@@ -152,50 +158,78 @@ function Main() {
       </section>
 
       <section id="projetos">
-        <div>
-          <h2>Projetos Realizados</h2>
-          <div className="line"></div>
-        </div>
-        <div className="cards-projetos">
-          <div className="card-projeto">
-            <img src={emergencIA} alt="Projeto EmergêncIA" />
-            <h3>EmergêncIA</h3>
-            <div className="card-buttons">
-              <a href="https://github.com/EmergencIA-hackathon/EmergencIA" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
-              <button className="botao-detalhes" onClick={() => setProjetoAberto(true)}>+</button>
-            </div>
+      <div>
+        <h2>Projetos Realizados</h2>
+        <div className="line"></div>
+      </div>
+      <div className="cards-projetos">
+        <div className="card-projeto">
+          <img src={emergencIA} alt="Projeto EmergêncIA" />
+          <h3>EmergêncIA</h3>
+          <div className="card-buttons">
+            <a href="https://github.com/EmergencIA-hackathon/EmergencIA" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            <button className="botao-detalhes" onClick={() => setProjetoAberto('emergencia')}>+</button>
           </div>
         </div>
-      </section>
 
-      
-      {projetoAberto && (
-        <div className="modal-projeto">
-          <div className="conteudo-projeto estilo-formulario">
-            <button className="fechar-modal" onClick={() => setProjetoAberto(false)}>X</button>
-            
-            <h3 className="titulo-detalhe">EmergêncIA: Chatbot para Registro de Ocorrências</h3>
-            
-            <div className="imagens-projeto">
-              
-              <img src={emergencIAT2} alt="EmergêncIA on Telegram" />
-              <img src={emergencIAT1} alt="EmergêncIA on Telegram" />
-              
-            </div>
-            
-            <div className="tecnologias-projeto">
-              <ul>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>Telegram Bot API</li>
-                <li>Node.Js</li>
-                <li>Docker</li>
-                <li>Ngrok</li>
-              </ul>
-            </div>
+        <div className="card-projeto">
+          <img src={icon} alt="Landing Page Arte Tintas SC" />
+          <h3>Arte Tintas | SC</h3>
+          <div className="card-buttons">
+            <a href="https://github.com/jenniferdomgs/webpage-artetintas" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            <button className="botao-detalhes" onClick={() => setProjetoAberto('arteTintas')}>+</button>
           </div>
         </div>
-      )}
+      </div>
+    </section>
+
+    {projetoAberto === 'emergencia' && (
+      <div className="modal-projeto">
+        <div className="conteudo-projeto estilo-formulario">
+          <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
+          <h3 className="titulo-detalhe">EmergêncIA: Chatbot para Registro de Ocorrências</h3>
+          <div className="imagens-projeto">
+            <img src={emergencIAT2} alt="EmergêncIA on Telegram" />
+            <img src={emergencIAT1} alt="EmergêncIA on Telegram" />
+          </div>
+          <div className="tecnologias-projeto">
+            <ul>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>Telegram Bot API</li>
+              <li>Node.Js</li>
+              <li>Docker</li>
+              <li>Ngrok</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {projetoAberto === 'arteTintas' && (
+      <div className="modal-projeto">
+        <div className="conteudo-projeto estilo-formulario">
+          <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
+          <h3 className="titulo-detalhe">Arte Tintas SC: Landing Page Responsiva</h3>
+          <div className="imagens-projeto">
+            <img src={arteTintasThumb} alt="Arte Tintas SC - Versão Desktop" />
+            <img src={arteTintasDesk2} alt="Arte Tintas SC - Versão Desktop" />
+            <img src={arteTintasMob1} alt="Arte Tintas SC - Versão Mobile" />
+            <img src={arteTintasMob2} alt="Arte Tintas SC - Versão Mobile" />
+          </div>
+          <div className="tecnologias-projeto">
+            <ul>
+              <li>React</li>
+              <li>Vite</li>
+              <li>HTML</li>
+              <li>CSS Responsivo</li>
+              <li>Hospedagem Vercel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    )}
+
     </main>
   );
 }
