@@ -4,7 +4,7 @@
 
 ![image](https://github.com/user-attachments/assets/fdba125c-fba2-4143-b6b9-d911e167ad05)
 
-Projeto desenvolvido como um Portfólio Pessoal.
+Projeto desenvolvido como um Portifólio Pessoal.
 
 
 ## Funcionalidades
