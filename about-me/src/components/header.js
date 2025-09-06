@@ -51,20 +51,19 @@ function Header() {
           <img className="perfil-img" src={perfilImage} alt="Perfil" />
           <h2>Jennifer Domingos</h2>
           <div className="social-icons">
-            <a href="https://instagram.com/jenniferdmgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
             <a href="https://github.com/jenniferdomgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/jennifer-domingos-061897328" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
             <a href="mailto:jenniferdomgs@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/jennifer-domingos-061897328" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
         <ul className="nav-links">
           <li><a href="#home"><i className="fas fa-home"></i> Home</a></li>
           <li><a href="#sobre"><i className="fas fa-user"></i> Sobre Mim</a></li>
-          <li><a href="#formacao"><i className="fas fa-graduation-cap"></i> Formação</a></li>
+          <li><a href="#resume"><i className="fas fa-graduation-cap"></i> Formação</a></li>
           <li><a href="#projetos"><i className="fas fa-folder-open"></i> Projetos Realizados</a></li>
         </ul>
         <div className="footer-text">
-          <p>© Copyright <strong>Portfólio Jennifer</strong></p>
+          <p>© Copyright <strong>Portifólio Jennifer</strong></p>
           <p>Desenvolvido por <a href="#sobre">Jennifer</a></p>
         </div>
       </nav>
@@ -81,18 +80,25 @@ function Header() {
         color: '#fff',
         textAlign: 'center'
       }}>
-        <h1 style={{ fontSize: '40px', paddingLeft: '20px' }}>
+        <h1 style={{ fontSize: '40px'}}>
           {displayedName}<span className="cursor">|</span>
         </h1>
         <div className="role">
           <div className="line" style={{
             width: '4px',
             height: '30px',
-            backgroundColor: '#ff0077',
+            backgroundColor: '#BB1DBE', 
             margin: '10px 0'
           }}></div>
-          <p style={{ fontSize: '32px', margin: 0 }}>{displayedTitle}</p>
+          <p style={{ fontSize: '32px' }}>{displayedTitle}</p>
         </div>
+        <a 
+          href="/curriculo.pdf" 
+          download 
+          className="btn-cv"
+        >
+          <i class="fa-solid fa-download"></i> Download CV 
+        </a>
       </div>
     </header>
   );
