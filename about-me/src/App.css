@@ -88,6 +88,32 @@ html, body {
   color: var(--primary);
 }
 
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  height: 100vh;
+  padding: 80px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.role {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role .line {
+  width: 5px;
+  height: 40px;
+  background-color: var(--primary);
+  margin: 10px 0;
+}
+
 .footer-text {
   font-size: 14px;
   color: var(--dark);
@@ -144,7 +170,7 @@ section .line {
 
 /* ================= SOBRE ================= */
 #sobre > div:first-child {
-  margin-bottom: 20px; /* diminui espaço do título */
+  margin-bottom: 20px;
 }
 
 .sobre-container {
@@ -184,7 +210,7 @@ section .line {
 }
 
 .sobre-icone img {
-  max-width: 600;
+  max-width: 600px;
   border-radius: 15px;
 }
 
@@ -231,14 +257,13 @@ section .line {
 
 /* ================= RESUMO ================= */
 .resume-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
-.resume-col {
-  flex: 1 1 45%;
+.resume-item {
   background-color: var(--light);
   color: var(--dark);
   border-radius: 12px;
@@ -246,13 +271,9 @@ section .line {
   min-width: 280px;
 }
 
-.resume-title {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.resume-item {
-  margin-bottom: 15px;
+.resume-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0px 6px 12px #BB1DBE;
 }
 
 .resume-item .ano {
@@ -270,6 +291,17 @@ section .line {
   cursor: pointer;
   font-weight: bold;
 }
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.description.expanded {
+  max-height: 500px;
+}
+
 
 /* ================= CERTIFICADOS ================= */
 .certificados-grid {
@@ -306,13 +338,6 @@ section .line {
   border-radius: 50%;
   background-color: var(--light);
   padding: 5px;
-}
-
-#titlefe {
-  display: flex;
-  width: 100%;
-  justify-content: start;
-  gap: 335px;
 }
 
 /* ================= PROJETOS ================= */
@@ -464,18 +489,38 @@ section .line {
 
   .hero_section {
     margin-left: 0;
+    justify-content: center; 
+    align-items: flex-start;
+    text-align: left;
     padding: 20px;
-    text-align: center;
+    height: 80vh;
   }
+  .hero_section h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .hero_section p {
+    font-size: 24px;
+  }
+ 
+
+  .btn-cv {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
   .perfil-img { height: 100px; width: 100px; }
   main { margin-left: 0; padding: 20px; }
   .sobre-icone { display: none; }
   .cards-projetos { flex-direction: column; align-items: center; }
   .card-projeto { width: 90%; }
-  .resume-container { flex-direction: column; }
-  .certificados-grid { grid-template-columns: 1fr; }
-
-  #titlefe {
-    gap: 20px;
+  .resume-container { 
+    grid-template-columns: 1fr; 
+    flex-direction: column;
   }
+  .certificados-grid { grid-template-columns: 1fr;}
+
+  .card-certificado { width: 340px;}
 }

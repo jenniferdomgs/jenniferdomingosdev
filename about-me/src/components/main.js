@@ -23,14 +23,13 @@ import jessempadas1 from '../img/homeDesktop.png';
 import jessempadas2 from '../img/homeMobile.png';
 import jessempadas3 from '../img/produtoFornecedor-mobile.png'
 
-
 function Main() {
   const [projetoAberto, setProjetoAberto] = useState(null);
   const [activeTech, setActiveTech] = useState(null);
-  const [showInfo, setShowInfo] = useState({});
+  const [infoAberta, setInfoAberta] = useState(null);
 
   const toggleInfo = (id) => {
-    setShowInfo(prev => ({ ...prev, [id]: !prev[id] }));
+    setInfoAberta(prevId => prevId === id ? null : id);
   };
 
   const tecnologias = [
@@ -51,24 +50,18 @@ function Main() {
           <h2>Sobre Mim</h2>
           <div className="line"></div>
         </div>
-
         <div className="sobre-container">
           <div className="sobre-texto">
             <h2>Olá! Meu nome é Jennifer</h2>
             <p>mas você pode me chamar de Jenni.</p>
-
-            <p><i class="fa-solid fa-graduation-cap"></i> Sou Técnica em Informática pelo IFRN, e atualmente estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas na mesma instituição.</p>
-            
-            <p><i class="fa-solid fa-briefcase"></i> Atuei como aluna pesquisadora na DTIC/PMRN em 2024, desenvolvendo soluções para a Segurança Pública do RN.</p>
-
-            <p><i class="fa-solid fa-medal"></i> Participei do 1° Hackathon do MJSP, com o projeto EmergêncIA, conquistando o 5° lugar nacional.</p>
+            <p><i className="fa-solid fa-graduation-cap"></i> Sou Técnica em Informática pelo IFRN, e atualmente estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas na mesma instituição.</p>
+            <p><i className="fa-solid fa-briefcase"></i> Atuei como aluna pesquisadora na DTIC/PMRN em 2024, desenvolvendo soluções para a Segurança Pública do RN.</p>
+            <p><i className="fa-solid fa-medal"></i> Participei do 1° Hackathon do MJSP, com o projeto EmergêncIA, conquistando o 5° lugar nacional.</p>
           </div>
-
           <div className="sobre-icone">
             <img className="iconsobre" src={jenni} alt="Sobre" />
           </div>
         </div>
-
         <div className="tecnologias">
           <div>
             <h2>Tecnologias & Ferramentas</h2>
@@ -90,57 +83,52 @@ function Main() {
       </section>
 
       <section id="resume">
-        <div id='titlefe'>
+        <div>
           <div>
-            <h2>Formação</h2>
-            <div className="line"></div>
-          </div>
-          
-          <div>
-            <h2>Experiência</h2>
+            <h2>Formação & Experiência</h2>
             <div className="line"></div>
           </div>
         </div>
 
         <div className="resume-container">
-          <div className="resume-col">
-            <div className="resume-item">
-              <span className="ano">2021 - 2025</span>
-              <h4>
-                Técnica em Informática - IFRN
-                <button className="expand-btn" onClick={() => toggleInfo(3)}><i class="fa-solid fa-caret-down"></i></button>
-              </h4>
-              {showInfo[3] && <p>O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais,
-            seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados
-            e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.</p>}
-            </div>
-            <div className="resume-item">
-              <span className="ano">2025 - 2028</span>
-              <h4>
-                Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas - IFRN
-                <button className="expand-btn" onClick={() => toggleInfo(4)}><i class="fa-solid fa-caret-down"></i></button>
-              </h4>
-              {showInfo[4] && <p>O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>}
+          <div className="resume-item">
+            <span className="ano">2021 - 2025</span>
+            <h4>
+              Técnica em Informática - IFRN
+              <button className="expand-btn" onClick={() => toggleInfo("info")}><i className="fa-solid fa-caret-down"></i></button>
+            </h4>
+            <div className={`description ${infoAberta === 'info' ? 'expanded' : ''}`}>
+              <p>O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais, seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.</p>
             </div>
           </div>
-
-          <div className="resume-col">
-            <div className="resume-item">
-              <span className="ano">2024 - 2025</span>
-              <h4>
-                Aluna Pesquisadora Na DTIC/PMRN
-                <button className="expand-btn" onClick={() => toggleInfo(5)}><i class="fa-solid fa-caret-down"></i></button>
-              </h4>
-              {showInfo[5] && <p>Trabalhei no desenvolvimento de sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Também atuei na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto.
-                </p>}
+          <div className="resume-item">
+            <span className="ano">2025 - 2028</span>
+            <h4>
+              Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas - IFRN
+              <button className="expand-btn" onClick={() => toggleInfo("tads")}><i className="fa-solid fa-caret-down"></i></button>
+            </h4>
+            <div className={`description ${infoAberta === 'tads' ? 'expanded' : ''}`}>
+              <p>O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
             </div>
-            <div className="resume-item">
-              <span className="ano">Março de 2025</span>
-              <h4>
-                Finalista - Hackathon Segurança Pública (MJSP)
-                <button className="expand-btn" onClick={() => toggleInfo(6)}><i class="fa-solid fa-caret-down"></i></button>
-              </h4>
-              {showInfo[6] && <p>Fui finalista do primeiro hackathon promovido pelo Ministério da Justiça e Segurança Pública: Tecnologias Disruptivas Para Segurança Pública, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.</p>}
+          </div>
+          <div className="resume-item">
+            <span className="ano">2024 - 2025</span>
+            <h4>
+              Aluna Pesquisadora - DTIC/PMRN
+              <button className="expand-btn" onClick={() => toggleInfo("dtic")}><i className="fa-solid fa-caret-down"></i></button>
+            </h4>
+            <div className={`description ${infoAberta === 'dtic' ? 'expanded' : ''}`}>
+              <p>Trabalhei no desenvolvimento de sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Também atuei na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. (DTIC/PMRN: Diretoria de Tecnologia Inovação e Comunicação da Polícia Militar do Rio Grande do Norte)</p>
+            </div>
+          </div>
+          <div className="resume-item">
+            <span className="ano">Março de 2025</span>
+            <h4>
+              Finalista - Hackathon Segurança Pública (MJSP)
+              <button className="expand-btn" onClick={() => toggleInfo("mjsp")}><i className="fa-solid fa-caret-down"></i></button>
+            </h4>
+            <div className={`description ${infoAberta === 'mjsp' ? 'expanded' : ''}`}>
+              <p>Fui finalista do primeiro hackathon promovido pelo Ministério da Justiça e Segurança Pública: Tecnologias Disruptivas Para Segurança Pública, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.</p>
             </div>
           </div>
         </div>
@@ -151,22 +139,21 @@ function Main() {
           <h2>Certificados</h2>
           <div className="line"></div>
         </div>
-
         <div className="certificados-grid">
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
             <h3>Introduction to IoT</h3>
-            <p>Cisco Networking Academy</p>
+            <p>Cisco Net Academy</p>
           </div>
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
             <h3>Introduction to Cybersecurity</h3>
-            <p>Cisco Networking Academy</p>
+            <p>Cisco Net Academy</p>
           </div>
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
             <h3>NDG Linux Unhatched</h3>
-            <p>Cisco Networking Academy</p>
+            <p>Cisco Net Academy</p>
           </div>
           <div className="card-certificado">
             <img src={hackathon} alt="Hackathon" />
@@ -186,38 +173,35 @@ function Main() {
             <img src={emergencIA} alt="Projeto EmergêncIA" />
             <div className="overlay">
               <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('emergencia')} className='botao-detalhes'>Ver Projeto</button>
                 <a href="https://github.com/EmergencIA-hackathon/EmergencIA" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <button onClick={() => setProjetoAberto('emergencia')} className='botao-detalhes'>Ver Projeto</button>
               </div>
             </div>
           </div>
-
           <div className="card-projeto">
             <img src={icon} alt="Landing Page Arte Pinturas SC" />
             <div className="overlay">
               <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('artePinturas')} className='botao-detalhes'>Ver Projeto</button>
                 <a href="https://github.com/jenniferdomgs/webpage-artepinturas" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <button onClick={() => setProjetoAberto('artePinturas')} className='botao-detalhes'>Ver Projeto</button>
               </div>
             </div>
           </div>
-
           <div className="card-projeto">
             <img src={logoJess} alt="Jess Empadas" />
             <div className="overlay">
               <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('Jessempadas')} className='botao-detalhes'>Ver Projeto</button>
                 <a href="https://github.com/jenniferdomgs/doceria-jess_empadas" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <button onClick={() => setProjetoAberto('Jessempadas')} className='botao-detalhes'>Ver Projeto</button>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -227,7 +211,7 @@ function Main() {
             <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
             {projetoAberto === 'emergencia' && (
               <>
-                <h3 className="titulo-detalhe"><i class="fa-solid fa-tower-broadcast"></i> EmergencIA: Chatbot para Registro de Ocorrências</h3>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-tower-broadcast"></i> EmergencIA: Chatbot para Registro de Ocorrências</h3>
                 <div className="imagens-projeto">
                   <img src={emergencIAT2} alt="EmergencIA Telegram" />
                   <img src={emergencIAT1} alt="EmergencIA Telegram" />
@@ -246,7 +230,7 @@ function Main() {
             )}
             {projetoAberto === 'artePinturas' && (
               <>
-                <h3 className="titulo-detalhe"><i class="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
                 <div className="imagens-projeto">
                   <img src={arteTintasThumb} alt="Desktop" />
                   <img src={arteTintasDesk2} alt="Desktop" />
@@ -264,32 +248,27 @@ function Main() {
                 </div>
               </>
             )}
-
             {projetoAberto === 'Jessempadas' && (
-              <div className="modal-projeto">
-                <div className="conteudo-projeto estilo-formulario">
-                  <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
-                  <h3 className="titulo-detalhe"><i class="fa-solid fa-cart-shopping"></i> E-commerce Jess Empadas</h3>
-                  <div className="imagens-projeto">
-                    <img src={jessempadas2} alt="Versão Mobile" />
-                    <img src={jessempadas3} alt="Painel Fornecedor" />
-                    <img src={jessempadas1} alt="Versão Desktop" />
-                  </div>
-                  <div className="tecnologias-projeto">
-                    <ul>
-                      <li>Python</li>
-                      <li>Flask</li>
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>Docker</li>
-                      <li>PostgreSQL</li>
-                    </ul>
-                  </div>
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-cart-shopping"></i> E-commerce Jess Empadas</h3>
+                <div className="imagens-projeto">
+                  <img src={jessempadas2} alt="Versão Mobile" />
+                  <img src={jessempadas3} alt="Painel Fornecedor" />
+                  <img src={jessempadas1} alt="Versão Desktop" />
                 </div>
-              </div>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Docker</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </>
             )}
-
           </div>
         </div>
       )}
