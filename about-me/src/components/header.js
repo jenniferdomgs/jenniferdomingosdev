@@ -86,7 +86,7 @@ function Header() {
           <p className="hero-title">{displayedTitle}</p>
         </div>
         <a 
-          href="../CV-Jennifer_Domingos-Dev.pdf" 
+          href="/CV-Jennifer_Domingos-Dev.pdf" 
           download 
           className="btn-cv"
         >
