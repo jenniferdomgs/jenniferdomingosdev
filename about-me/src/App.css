@@ -469,6 +469,20 @@ section .line {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+.botao-privado {
+  background-color: #555;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.paragrafopvd {
+  color: black;
+  font-style: italic;
+}
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
   .sidebar { display: none; }

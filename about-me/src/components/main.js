@@ -21,7 +21,12 @@ import icon from '../img/icon.png';
 import logoJess from '../img/logojess.png';
 import jessempadas1 from '../img/homeDesktop.png';
 import jessempadas2 from '../img/homeMobile.png';
-import jessempadas3 from '../img/produtoFornecedor-mobile.png'
+import jessempadas3 from '../img/produtoFornecedor-mobile.png';
+import IMOVEIS from '../img/imoveis.png';
+import RNSUS from '../img/rnsus.png';
+import SIGAP from '../img/sigap.png';
+import clouddevops from '../img/aluralogo.jpeg'
+
 
 function Main() {
   const [projetoAberto, setProjetoAberto] = useState(null);
@@ -160,6 +165,11 @@ function Main() {
             <h3>Tecnologias Disruptivas Segurança Pública</h3>
             <p>Ministério da Justiça e Segurança Pública</p>
           </div>
+          <div className="card-certificado">
+            <img src={clouddevops} alt="clouddevopsalura" />
+            <h3>Imersão Cloud Devops</h3>
+            <p>Alura</p>
+          </div>
         </div>
       </section>
 
@@ -168,6 +178,7 @@ function Main() {
           <h2>Projetos Realizados</h2>
           <div className="line"></div>
         </div>
+
         <div className="cards-projetos">
           <div className="card-projeto">
             <img src={emergencIA} alt="Projeto EmergêncIA" />
@@ -180,6 +191,7 @@ function Main() {
               </div>
             </div>
           </div>
+
           <div className="card-projeto">
             <img src={icon} alt="Landing Page Arte Pinturas SC" />
             <div className="overlay">
@@ -191,6 +203,7 @@ function Main() {
               </div>
             </div>
           </div>
+
           <div className="card-projeto">
             <img src={logoJess} alt="Jess Empadas" />
             <div className="overlay">
@@ -202,76 +215,165 @@ function Main() {
               </div>
             </div>
           </div>
+
+          <div className="card-projeto">
+            <img src={IMOVEIS} alt="Projeto Privado: Imóveis" />
+            <div className="overlay">
+              <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('imoveis')} className='botao-detalhes'>Descrição</button>
+                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-projeto">
+            <img src={RNSUS} alt="Projeto Privado: RN Sustentável" />
+            <div className="overlay">
+              <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('rnsus')} className='botao-detalhes'>Descrição</button>
+                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-projeto">
+            <img src={SIGAP} alt="Projeto Privado: SIGAP" />
+            <div className="overlay">
+              <div className="card-buttons">
+                <button onClick={() => setProjetoAberto('sigap')} className='botao-detalhes'>Descrição</button>
+                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {projetoAberto && (
-        <div className="modal-projeto">
-          <div className="conteudo-projeto estilo-formulario">
-            <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
-            {projetoAberto === 'emergencia' && (
-              <>
-                <h3 className="titulo-detalhe"><i className="fa-solid fa-tower-broadcast"></i> EmergencIA: Chatbot para Registro de Ocorrências</h3>
-                <div className="imagens-projeto">
-                  <img src={emergencIAT2} alt="EmergencIA Telegram" />
-                  <img src={emergencIAT1} alt="EmergencIA Telegram" />
-                </div>
-                <div className="tecnologias-projeto">
-                  <ul>
-                    <li>Python</li>
-                    <li>Flask</li>
-                    <li>Telegram Bot API</li>
-                    <li>Node.Js</li>
-                    <li>Docker</li>
-                    <li>Ngrok</li>
-                  </ul>
-                </div>
-              </>
-            )}
-            {projetoAberto === 'artePinturas' && (
-              <>
-                <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
-                <div className="imagens-projeto">
-                  <img src={arteTintasThumb} alt="Desktop" />
-                  <img src={arteTintasDesk2} alt="Desktop" />
-                  <img src={arteTintasMob1} alt="Mobile" />
-                  <img src={arteTintasMob2} alt="Mobile" />
-                </div>
-                <div className="tecnologias-projeto">
-                  <ul>
-                    <li>React</li>
-                    <li>Vite</li>
-                    <li>HTML</li>
-                    <li>CSS Responsivo</li>
-                    <li>Vercel</li>
-                  </ul>
-                </div>
-              </>
-            )}
-            {projetoAberto === 'Jessempadas' && (
-              <>
-                <h3 className="titulo-detalhe"><i className="fa-solid fa-cart-shopping"></i> E-commerce Jess Empadas</h3>
-                <div className="imagens-projeto">
-                  <img src={jessempadas2} alt="Versão Mobile" />
-                  <img src={jessempadas3} alt="Painel Fornecedor" />
-                  <img src={jessempadas1} alt="Versão Desktop" />
-                </div>
-                <div className="tecnologias-projeto">
-                  <ul>
-                    <li>Python</li>
-                    <li>Flask</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Docker</li>
-                    <li>PostgreSQL</li>
-                  </ul>
-                </div>
-              </>
-            )}
-          </div>
+    {projetoAberto && (
+      <div className="modal-projeto">
+        <div className="conteudo-projeto estilo-formulario">
+          <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
+
+          {projetoAberto === 'emergencia' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-tower-broadcast"></i> EmergencIA: Chatbot para Registro de Ocorrências</h3>
+              <div className="imagens-projeto">
+                <img src={emergencIAT2} alt="EmergencIA Telegram" />
+                <img src={emergencIAT1} alt="EmergencIA Telegram" />
+              </div>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>Telegram Bot API</li>
+                  <li>Node.Js</li>
+                  <li>Docker</li>
+                  <li>Ngrok</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {projetoAberto === 'artePinturas' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
+              <div className="imagens-projeto">
+                <img src={arteTintasThumb} alt="Desktop" />
+                <img src={arteTintasDesk2} alt="Desktop" />
+                <img src={arteTintasMob1} alt="Mobile" />
+                <img src={arteTintasMob2} alt="Mobile" />
+              </div>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>React</li>
+                  <li>Vite</li>
+                  <li>HTML</li>
+                  <li>CSS Responsivo</li>
+                  <li>Vercel</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {projetoAberto === 'Jessempadas' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-cart-shopping"></i> E-commerce Jess Empadas</h3>
+              <div className="imagens-projeto">
+                <img src={jessempadas2} alt="Versão Mobile" />
+                <img src={jessempadas3} alt="Painel Fornecedor" />
+                <img src={jessempadas1} alt="Versão Desktop" />
+              </div>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {projetoAberto === 'imoveis' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: Imóveis</h3>
+              <p className='paragrafopvd'>O sistema Imóveis é um projeto que visa auxiliar a PMRN (Polícia Militar do Rio Grande do Norte) no objetivo principal de facilitar o gerenciamento eficiente dos imóveis e OPMs (Organizações Policiais Militares) que estão sob posse ou administração da instituição.
+              </p>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {projetoAberto === 'rnsus' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: RN Sustentável</h3>
+              <p className='paragrafopvd'>O RN Sustentável é um sistema de levantamento de inventário, desenvolvido para atender uma demanda específica da 4ª Seção da PMRN para levantamento de informações sobre bens recebidos por doação do governo do estado mediante o programa em questão.
+              </p>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {projetoAberto === 'sigap' && (
+            <>
+              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: SIGAP</h3>
+              <p className='paragrafopvd'>O SIGAP, Sistema de Gerenciamento de Armas Particulares, é um sistema utilizado pela PMRN para o controle e gerenciamento da compra e movimentação de armas de fogo particulares, sendo administrado pelos profissionais da SSMMB (Seção de Suprimento e Manutenção de Material Bélico).</p>
+              <div className="tecnologias-projeto">
+                <ul>
+                  <li>Node Js</li>
+                  <li>React</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Axios</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </>
+          )}
         </div>
-      )}
+      </div>
+    )}
     </main>
   );
 }
