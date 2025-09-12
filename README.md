@@ -2,7 +2,7 @@
 > Status: Developing ⚠️
 ## About - Jennifer Domingos
 
-![image](https://github.com/user-attachments/assets/fdba125c-fba2-4143-b6b9-d911e167ad05)
+<img width="1348" height="580" alt="Home Desktop | jenniferdomingosdev" src="https://github.com/user-attachments/assets/b7dea511-a059-42cf-9432-a75c93816860" />
 
 Projeto desenvolvido como um Portifólio Pessoal.
 
@@ -12,7 +12,8 @@ Projeto desenvolvido como um Portifólio Pessoal.
 
 - Interface responsiva para visualização em dispositivos móveis e desktop;
 - Seção "Sobre Mim" com informações pessoais e profissionais;
-- Exibição de tecnologias e habilidades com ícones.
+- Exibição de tecnologias e habilidades com ícones;
+- Exposição de projetos realizados.
 
 
 ### Pré-requisitos
@@ -48,6 +49,7 @@ Projeto desenvolvido como um Portifólio Pessoal.
 - REACT
 - HTML
 - CSS
+- VERCEL para deploy
 
 ## Autoria Própria
 - [@jenniferdomingos](https://www.github.com/jenniferdomgs)
