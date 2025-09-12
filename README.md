@@ -26,7 +26,7 @@ Projeto desenvolvido como um Portifólio Pessoal.
 1. Clone o repositório
 
 ```bash
-     $ git clone https://github.com/jenniferdomgs/about-me.git
+     $ git clone https://github.com/jenniferdomgs/jenniferdomingosdev.git
 ```
 
 2. Navegue até a pasta do projeto  
