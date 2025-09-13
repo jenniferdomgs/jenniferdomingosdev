@@ -118,7 +118,7 @@ html, body {
   font-size: 14px;
   color: var(--dark);
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .footer-text a { color: var(--primary); text-decoration: none; }
 
@@ -483,6 +483,11 @@ section .line {
   color: black;
   font-style: italic;
 }
+
+.close-btn {
+  display: none;
+}
+
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
   .sidebar { display: none; }
@@ -537,4 +542,6 @@ section .line {
   .certificados-grid { grid-template-columns: 1fr;}
 
   .card-certificado { width: 340px;}
+
+  .close-btn {display: block;position: absolute;top: 15px; right: 20px;background: transparent;border: none;font-size: 28px;color: var(--dark);cursor: pointer;}
 }

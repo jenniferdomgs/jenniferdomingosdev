@@ -39,6 +39,12 @@ function Header() {
     setIsOpen(prev => !prev);
   };
 
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 768) { 
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="header" id="home">
       <div className="hamburger-menu" onClick={toggleSidebar}>
@@ -46,7 +52,10 @@ function Header() {
         <div></div>
         <div></div>
       </div>
+
       <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <button className="close-btn" onClick={() => setIsOpen(false)}>✕</button>
+
         <div className="perfil-section">
           <img className="perfil-img" src={perfilImage} alt="Perfil" />
           <h2>Jennifer Domingos</h2>
@@ -62,12 +71,14 @@ function Header() {
             </a>
           </div>
         </div>
+
         <ul className="nav-links">
-          <li><a href="#home"><i className="fas fa-home"></i> Home</a></li>
-          <li><a href="#sobre"><i className="fas fa-user"></i> Sobre Mim</a></li>
-          <li><a href="#resume"><i className="fas fa-graduation-cap"></i> Formação</a></li>
-          <li><a href="#projetos"><i className="fas fa-folder-open"></i> Projetos Realizados</a></li>
+          <li><a href="#home" onClick={handleLinkClick}><i className="fas fa-home"></i> Home</a></li>
+          <li><a href="#sobre" onClick={handleLinkClick}><i className="fas fa-user"></i> Sobre Mim</a></li>
+          <li><a href="#resume" onClick={handleLinkClick}><i className="fas fa-graduation-cap"></i> Formação</a></li>
+          <li><a href="#projetos" onClick={handleLinkClick}><i className="fas fa-folder-open"></i> Projetos Realizados</a></li>
         </ul>
+
         <div className="footer-text">
           <p>© Copyright <strong>Portifólio Jennifer</strong></p>
           <p>Desenvolvido por <a href="#sobre">Jennifer</a></p>
