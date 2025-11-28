@@ -1,10 +1,10 @@
 
-> Status: Developing ⚠️
+> Status: Concluído ✅
 ## About - Jennifer Domingos
 
 <img width="1348" height="580" alt="Home Desktop | jenniferdomingosdev" src="https://github.com/user-attachments/assets/b7dea511-a059-42cf-9432-a75c93816860" />
 
-Projeto desenvolvido como um Portifólio Pessoal.
+Projeto desenvolvido como um Portfólio Pessoal.
 
 
 ## Funcionalidades
@@ -51,5 +51,8 @@ Projeto desenvolvido como um Portifólio Pessoal.
 - CSS
 - VERCEL para deploy
 
+## 🔗 Disponível em: 
+- https://jenniferdomingosdev.vercel.app/
+  
 ## Autoria Própria
 - [@jenniferdomingos](https://www.github.com/jenniferdomgs)
