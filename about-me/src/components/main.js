@@ -25,8 +25,8 @@ import jessempadas3 from '../img/produtoFornecedor-mobile.png';
 import IMOVEIS from '../img/imoveis.png';
 import RNSUS from '../img/rnsus.png';
 import SIGAP from '../img/sigap.png';
-import clouddevops from '../img/aluralogo.jpeg'
-
+import clouddevops from '../img/aluralogo.jpeg';
+import logoFundBradesco from '../img/fundBradesco_logo.png';
 
 function Main() {
   const [projetoAberto, setProjetoAberto] = useState(null);
@@ -147,28 +147,45 @@ function Main() {
         <div className="certificados-grid">
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
-            <h3>Introduction to IoT</h3>
-            <p>Cisco Net Academy</p>
+            <div>
+              <h3>Introduction to IoT</h3>
+              <p>Cisco Net Academy</p>
+            </div>
           </div>
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
-            <h3>Introduction to Cybersecurity</h3>
-            <p>Cisco Net Academy</p>
+            <div>
+              <h3>Introduction to Cybersecurity</h3>
+              <p>Cisco Net Academy</p>
+            </div>
           </div>
           <div className="card-certificado">
             <img src={logoCisco} alt="Cisco" />
-            <h3>NDG Linux Unhatched</h3>
-            <p>Cisco Net Academy</p>
+            <div>
+              <h3>NDG Linux Unhatched</h3>
+              <p>Cisco Net Academy</p>
+            </div>
           </div>
           <div className="card-certificado">
             <img src={hackathon} alt="Hackathon" />
-            <h3>Tecnologias Disruptivas Segurança Pública</h3>
-            <p>Ministério da Justiça e Segurança Pública</p>
+            <div>
+              <h3>Tecnologias Disruptivas Segurança Pública</h3>
+              <p>Ministério da Justiça e Segurança Pública</p>
+            </div>
           </div>
           <div className="card-certificado">
             <img src={clouddevops} alt="clouddevopsalura" />
-            <h3>Imersão Cloud Devops</h3>
-            <p>Alura</p>
+            <div>
+              <h3>Imersão Cloud Devops</h3>
+              <p>Alura</p>
+            </div>
+          </div>
+          <div className="card-certificado">
+            <img src={logoFundBradesco} alt="FundacaoBradesco" />
+            <div>
+              <h3>Introdução à Análise de Dados - Microsoft Power BI</h3>
+              <p>Fundação Bradesco</p>
+            </div>
           </div>
         </div>
       </section>
@@ -221,7 +238,7 @@ function Main() {
             <div className="overlay">
               <div className="card-buttons">
                 <button onClick={() => setProjetoAberto('imoveis')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
               </div>
             </div>
           </div>
@@ -231,7 +248,7 @@ function Main() {
             <div className="overlay">
               <div className="card-buttons">
                 <button onClick={() => setProjetoAberto('rnsus')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
               </div>
             </div>
           </div>
@@ -241,7 +258,7 @@ function Main() {
             <div className="overlay">
               <div className="card-buttons">
                 <button onClick={() => setProjetoAberto('sigap')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i class="fa-solid fa-lock"></i> Projeto Privado</span>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
               </div>
             </div>
           </div>
@@ -277,10 +294,10 @@ function Main() {
             <>
               <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
               <div className="imagens-projeto">
-                <img src={arteTintasThumb} alt="Desktop" />
-                <img src={arteTintasDesk2} alt="Desktop" />
                 <img src={arteTintasMob1} alt="Mobile" />
                 <img src={arteTintasMob2} alt="Mobile" />
+                <img src={arteTintasThumb} alt="Desktop" />
+                <img src={arteTintasDesk2} alt="Desktop" />
               </div>
               <div className="tecnologias-projeto">
                 <ul>

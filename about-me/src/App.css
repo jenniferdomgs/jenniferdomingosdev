@@ -88,32 +88,6 @@ html, body {
   color: var(--primary);
 }
 
-.hero_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  height: 100vh;
-  padding: 80px;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-}
-
-.role {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.role .line {
-  width: 5px;
-  height: 40px;
-  background-color: var(--primary);
-  margin: 10px 0;
-}
-
 .footer-text {
   font-size: 14px;
   color: var(--dark);
@@ -129,6 +103,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start; 
   height: 100vh;
   padding: 80px;
   color: var(--light);
@@ -168,23 +143,17 @@ section .line {
   margin-bottom: 20px;
 }
 
-/* ================= SOBRE ================= */
+/* ================= SOBRE (GRID) ================= */
 #sobre > div:first-child {
   margin-bottom: 20px;
 }
 
 .sobre-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.sobre-texto {
-  flex: 1;
-  min-width: 280px;
+  align-items: center;
 }
 
 .sobre-texto h3 {
@@ -203,18 +172,17 @@ section .line {
 }
 
 .sobre-icone {
-  flex: 1;
   display: flex;
   justify-content: center;
-  min-width: 250px;
 }
 
 .sobre-icone img {
-  max-width: 600px;
+  max-width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
-/* ================= TECNOLOGIAS ================= */
+/* ================= TECNOLOGIAS (GRID) ================= */
 .tecnologias {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -227,10 +195,11 @@ section .line {
 }
 
 .tecnologias-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 20px;
-  justify-content: center;
+  justify-items: center;
+  padding: 20px;
 }
 
 .tecnologias-grid img {
@@ -242,9 +211,7 @@ section .line {
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.tecnologias-grid img:hover {
-  animation: techClick 0.4s ease-in-out;
-}
+.tecnologias-grid img:hover,
 .tecnologias-grid img.active {
   animation: techClick 0.4s ease-in-out;
 }
@@ -255,10 +222,10 @@ section .line {
   100% { transform: scale(1) rotate(0deg); }
 }
 
-/* ================= RESUMO ================= */
+/* ================= RESUMO (GRID) ================= */
 .resume-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
   margin-top: 30px;
 }
@@ -268,7 +235,7 @@ section .line {
   color: var(--dark);
   border-radius: 12px;
   padding: 20px;
-  min-width: 280px;
+  width: 100%;
 }
 
 .resume-item:hover {
@@ -302,11 +269,10 @@ section .line {
   max-height: 500px;
 }
 
-
-/* ================= CERTIFICADOS ================= */
+/* ================= CERTIFICADOS (GRID) ================= */
 .certificados-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 30px;
   justify-items: center;
@@ -319,11 +285,12 @@ section .line {
   padding: 20px;
   width: 100%;
   max-width: 520px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px 1fr;
   align-items: center;
+  gap: 15px;
   transition: 0.3s;
   cursor: pointer;
-  gap: 20px;
 }
 
 .card-certificado:hover {
@@ -334,43 +301,51 @@ section .line {
 .card-certificado img {
   width: 70px;
   height: 70px;
-  margin-right: 15px;
   border-radius: 50%;
   background-color: var(--light);
   padding: 5px;
+  justify-self: center;
 }
 
-/* ================= PROJETOS ================= */
+/* ================= PROJETOS (GRID) ================= */
 #projetos, #certificados {
   padding-top: 20px;
 }
 
 .cards-projetos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
+
 .card-projeto {
   background-color: var(--light);
   border-radius: 16px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
+  max-width: 350px; 
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
   text-align: center;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-projeto:hover { transform: scale(1.03); }
+
 .card-projeto img {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 15px;
 }
+
 .card-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: auto;
 }
 .card-buttons a,
 .card-buttons .botao-detalhes {
@@ -426,18 +401,23 @@ section .line {
 .titulo-detalhe { font-size: 22px; margin-bottom: 20px; }
 
 .imagens-projeto {
-  display: flex; flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-bottom: 20px;
 }
 .imagens-projeto img {
-  max-width: 40%;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .tecnologias-projeto ul {
-  display: flex; flex-wrap: wrap;
+  display: flex; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   list-style: none;
@@ -451,7 +431,7 @@ section .line {
   font-weight: bold;
 }
 
-/* ================= BOTÃO CV ================= */
+/* ================= BOTÃO CV e PRIVADO ================= */
 .btn-cv {
   margin-top: 20px;
   padding: 12px 28px;
@@ -482,6 +462,7 @@ section .line {
 .paragrafopvd {
   color: black;
   font-style: italic;
+  margin-bottom: 20px;
 }
 
 .close-btn {
@@ -522,7 +503,6 @@ section .line {
   .hero_section p {
     font-size: 24px;
   }
- 
 
   .btn-cv {
     margin-top: 15px;
@@ -532,16 +512,20 @@ section .line {
 
   .perfil-img { height: 100px; width: 100px; }
   main { margin-left: 0; padding: 20px; }
-  .sobre-icone { display: none; }
-  .cards-projetos { flex-direction: column; align-items: center; }
-  .card-projeto { width: 90%; }
-  .resume-container { 
+  
+  .sobre-container {
     grid-template-columns: 1fr; 
-    flex-direction: column;
   }
-  .certificados-grid { grid-template-columns: 1fr;}
+  .sobre-icone { display: none; } 
 
-  .card-certificado { width: 340px;}
-
-  .close-btn {display: block;position: absolute;top: 15px; right: 20px;background: transparent;border: none;font-size: 28px;color: var(--dark);cursor: pointer;}
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px; right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: var(--dark);
+    cursor: pointer;
+  }
 }
