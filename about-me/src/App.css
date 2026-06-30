@@ -469,6 +469,27 @@ section .line {
   display: none;
 }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid #555;
+  border-radius: 20px;
+  padding: 4px 14px;
+  color:#081C34;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 auto 16px;
+  transition: border-color 0.2s;
+  letter-spacing: 1px;
+}
+.lang-toggle:hover { border-color:#BB1DBE; }
+.lang-divider { opacity: 0.3; }
+.lang-active { color:#BB1DBE; font-weight: 700; }
+
+
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
   .sidebar { display: none; }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLang } from '../LangContext';
 import jenni from '../img/jenni-sfundo.png';
 import docker from '../img/docker.png';
 import mysql from '../img/mysql.png';
@@ -29,6 +30,7 @@ import clouddevops from '../img/aluralogo.jpeg';
 import logoFundBradesco from '../img/fundBradesco_logo.png';
 
 function Main() {
+  const { t } = useLang();
   const [projetoAberto, setProjetoAberto] = useState(null);
   const [activeTech, setActiveTech] = useState(null);
   const [infoAberta, setInfoAberta] = useState(null);
@@ -52,16 +54,16 @@ function Main() {
     <main>
       <section id="sobre">
         <div>
-          <h2>Sobre Mim</h2>
+          <h2>{t.sobre.titulo}</h2>
           <div className="line"></div>
         </div>
         <div className="sobre-container">
           <div className="sobre-texto">
-            <h2>Olá! Meu nome é Jennifer</h2>
-            <p>mas você pode me chamar de Jenni.</p>
-            <p><i className="fa-solid fa-graduation-cap"></i> Sou Técnica em Informática pelo IFRN, e atualmente estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas na mesma instituição.</p>
-            <p><i className="fa-solid fa-briefcase"></i> Atuei como aluna pesquisadora na DTIC/PMRN em 2024, desenvolvendo soluções para a Segurança Pública do RN.</p>
-            <p><i className="fa-solid fa-medal"></i> Participei do 1° Hackathon do MJSP, com o projeto EmergêncIA, conquistando o 5° lugar nacional.</p>
+            <h2>{t.sobre.ola}</h2>
+            <p>{t.sobre.apelido}</p>
+            <p><i className="fa-solid fa-graduation-cap"></i> {t.sobre.p1}</p>
+            <p><i className="fa-solid fa-briefcase"></i> {t.sobre.p2}</p>
+            <p><i className="fa-solid fa-medal"></i> {t.sobre.p3}</p>
           </div>
           <div className="sobre-icone">
             <img className="iconsobre" src={jenni} alt="Sobre" />
@@ -69,7 +71,7 @@ function Main() {
         </div>
         <div className="tecnologias">
           <div>
-            <h2>Tecnologias & Ferramentas</h2>
+            <h2>{t.sobre.tecTitulo}</h2>
             <div className="line"></div>
           </div>
           <div className="tecnologias-grid">
@@ -90,50 +92,53 @@ function Main() {
       <section id="resume">
         <div>
           <div>
-            <h2>Formação & Experiência</h2>
+            <h2>{t.resume.titulo}</h2>
             <div className="line"></div>
           </div>
         </div>
 
         <div className="resume-container">
           <div className="resume-item">
-            <span className="ano">2021 - 2025</span>
+            <span className="ano">{t.resume.items[0].ano}</span>
             <h4>
-              Técnica em Informática - IFRN
+              {t.resume.items[0].cargo}
               <button className="expand-btn" onClick={() => toggleInfo("info")}><i className="fa-solid fa-caret-down"></i></button>
             </h4>
             <div className={`description ${infoAberta === 'info' ? 'expanded' : ''}`}>
-              <p>O profissional formado em Informática pelo IFRN desenvolve, testa, implanta e mantém sistemas computacionais, seguindo padrões de programação e linguagens adequadas. Atua em ambientes de desenvolvimento, banco de dados e testes de software, com possibilidade de trabalhar em instituições públicas, privadas e do terceiro setor.</p>
+              <p>{t.resume.items[0].desc}</p>
             </div>
           </div>
+
           <div className="resume-item">
-            <span className="ano">2025 - 2028</span>
+            <span className="ano">{t.resume.items[1].ano}</span>
             <h4>
-              Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas - IFRN
+              {t.resume.items[1].cargo}
               <button className="expand-btn" onClick={() => toggleInfo("tads")}><i className="fa-solid fa-caret-down"></i></button>
             </h4>
             <div className={`description ${infoAberta === 'tads' ? 'expanded' : ''}`}>
-              <p>O profissional formado em Análise e Desenvolvimento de Sistemas pelo IFRN, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação. Utiliza ferramentas tecnológicas, linguagens de programação e metodologias de desenvolvimento para criar soluções eficientes e seguras. Com raciocínio lógico e foco na qualidade, usabilidade e integridade dos sistemas, atua em diferentes ambientes, como empresas públicas, privadas e organizações do terceiro setor, contribuindo para a inovação e otimização de processos.</p>
+              <p>{t.resume.items[1].desc}</p>
             </div>
           </div>
+
           <div className="resume-item">
-            <span className="ano">2024 - 2025</span>
+            <span className="ano">{t.resume.items[2].ano}</span>
             <h4>
-              Aluna Pesquisadora - DTIC/PMRN
+              {t.resume.items[2].cargo}
               <button className="expand-btn" onClick={() => toggleInfo("dtic")}><i className="fa-solid fa-caret-down"></i></button>
             </h4>
             <div className={`description ${infoAberta === 'dtic' ? 'expanded' : ''}`}>
-              <p>Trabalhei no desenvolvimento de sistemas e aplicações para modernizar os serviços digitais da Polícia Militar do Rio Grande do Norte (PM/RN), definindo interface gráfica, critérios de usabilidade e navegabilidade, além de projetar, implantar e manter soluções tecnológicas robustas. Também atuei na análise e codificação de programas, montagem da estrutura de banco de dados e seleção de ferramentas e metodologias adequadas ao projeto. (DTIC/PMRN: Diretoria de Tecnologia Inovação e Comunicação da Polícia Militar do Rio Grande do Norte)</p>
+              <p>{t.resume.items[2].desc}</p>
             </div>
           </div>
+
           <div className="resume-item">
-            <span className="ano">Março de 2025</span>
+            <span className="ano">{t.resume.items[3].ano}</span>
             <h4>
-              Finalista - Hackathon Segurança Pública (MJSP)
+              {t.resume.items[3].cargo}
               <button className="expand-btn" onClick={() => toggleInfo("mjsp")}><i className="fa-solid fa-caret-down"></i></button>
             </h4>
             <div className={`description ${infoAberta === 'mjsp' ? 'expanded' : ''}`}>
-              <p>Fui finalista do primeiro hackathon promovido pelo Ministério da Justiça e Segurança Pública: Tecnologias Disruptivas Para Segurança Pública, onde desenvolvi, junto com minha equipe, o EmergêncIA: um chatbot para registro de ocorrências. O evento proporcionou uma experiência enriquecedora de colaboração interdisciplinar, reunindo desenvolvedores, empreendedores, acadêmicos e profissionais da segurança pública. Através do EmergêncIA, contribuí para a criação de uma solução inovadora com potencial para otimizar processos e impactar positivamente a sociedade, alinhada ao compromisso do governo com a inovação tecnológica.</p>
+              <p>{t.resume.items[3].desc}</p>
             </div>
           </div>
         </div>
@@ -141,7 +146,7 @@ function Main() {
 
       <section id="certificados">
         <div>
-          <h2>Certificados</h2>
+          <h2>{t.certificados.titulo}</h2>
           <div className="line"></div>
         </div>
         <div className="certificados-grid">
@@ -169,21 +174,21 @@ function Main() {
           <div className="card-certificado">
             <img src={hackathon} alt="Hackathon" />
             <div>
-              <h3>Tecnologias Disruptivas Segurança Pública</h3>
-              <p>Ministério da Justiça e Segurança Pública</p>
+              <h3>{t.certificados.hackathon}</h3>
+              <p>{t.certificados.mjsp}</p>
             </div>
           </div>
           <div className="card-certificado">
             <img src={clouddevops} alt="clouddevopsalura" />
             <div>
-              <h3>Imersão Cloud Devops</h3>
+              <h3>{t.certificados.cloudDevops}</h3>
               <p>Alura</p>
             </div>
           </div>
           <div className="card-certificado">
             <img src={logoFundBradesco} alt="FundacaoBradesco" />
             <div>
-              <h3>Introdução à Análise de Dados - Microsoft Power BI</h3>
+              <h3>{t.certificados.powerBI}</h3>
               <p>Fundação Bradesco</p>
             </div>
           </div>
@@ -192,7 +197,7 @@ function Main() {
 
       <section id="projetos">
         <div>
-          <h2>Projetos Realizados</h2>
+          <h2>{t.projetos.titulo}</h2>
           <div className="line"></div>
         </div>
 
@@ -201,7 +206,7 @@ function Main() {
             <img src={emergencIA} alt="Projeto EmergêncIA" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('emergencia')} className='botao-detalhes'>Ver Projeto</button>
+                <button onClick={() => setProjetoAberto('emergencia')} className='botao-detalhes'>{t.projetos.verProjeto}</button>
                 <a href="https://github.com/EmergencIA-hackathon/EmergencIA" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
@@ -213,7 +218,7 @@ function Main() {
             <img src={icon} alt="Landing Page Arte Pinturas SC" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('artePinturas')} className='botao-detalhes'>Ver Projeto</button>
+                <button onClick={() => setProjetoAberto('artePinturas')} className='botao-detalhes'>{t.projetos.verProjeto}</button>
                 <a href="https://github.com/jenniferdomgs/webpage-artepinturas" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
@@ -225,7 +230,7 @@ function Main() {
             <img src={logoJess} alt="Jess Empadas" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('Jessempadas')} className='botao-detalhes'>Ver Projeto</button>
+                <button onClick={() => setProjetoAberto('Jessempadas')} className='botao-detalhes'>{t.projetos.verProjeto}</button>
                 <a href="https://github.com/jenniferdomgs/doceria-jess_empadas" target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
@@ -237,8 +242,8 @@ function Main() {
             <img src={IMOVEIS} alt="Projeto Privado: Imóveis" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('imoveis')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
+                <button onClick={() => setProjetoAberto('imoveis')} className='botao-detalhes'>{t.projetos.descricao}</button>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> {t.projetos.privado}</span>
               </div>
             </div>
           </div>
@@ -247,8 +252,8 @@ function Main() {
             <img src={RNSUS} alt="Projeto Privado: RN Sustentável" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('rnsus')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
+                <button onClick={() => setProjetoAberto('rnsus')} className='botao-detalhes'>{t.projetos.descricao}</button>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> {t.projetos.privado}</span>
               </div>
             </div>
           </div>
@@ -257,140 +262,111 @@ function Main() {
             <img src={SIGAP} alt="Projeto Privado: SIGAP" />
             <div className="overlay">
               <div className="card-buttons">
-                <button onClick={() => setProjetoAberto('sigap')} className='botao-detalhes'>Descrição</button>
-                <span className="botao-privado"><i className="fa-solid fa-lock"></i> Projeto Privado</span>
+                <button onClick={() => setProjetoAberto('sigap')} className='botao-detalhes'>{t.projetos.descricao}</button>
+                <span className="botao-privado"><i className="fa-solid fa-lock"></i> {t.projetos.privado}</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-    {projetoAberto && (
-      <div className="modal-projeto">
-        <div className="conteudo-projeto estilo-formulario">
-          <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
+      {projetoAberto && (
+        <div className="modal-projeto">
+          <div className="conteudo-projeto estilo-formulario">
+            <button className="fechar-modal" onClick={() => setProjetoAberto(null)}>X</button>
 
-          {projetoAberto === 'emergencia' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-tower-broadcast"></i> EmergencIA: Chatbot para Registro de Ocorrências</h3>
-              <div className="imagens-projeto">
-                <img src={emergencIAT2} alt="EmergencIA Telegram" />
-                <img src={emergencIAT1} alt="EmergencIA Telegram" />
-              </div>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>Python</li>
-                  <li>Flask</li>
-                  <li>Telegram Bot API</li>
-                  <li>Node.Js</li>
-                  <li>Docker</li>
-                  <li>Ngrok</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'emergencia' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-tower-broadcast"></i> {t.projetos.modal.emergencia.titulo}</h3>
+                <div className="imagens-projeto">
+                  <img src={emergencIAT2} alt="EmergencIA Telegram" />
+                  <img src={emergencIAT1} alt="EmergencIA Telegram" />
+                </div>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Python</li><li>Flask</li><li>Telegram Bot API</li>
+                    <li>Node.Js</li><li>Docker</li><li>Ngrok</li>
+                  </ul>
+                </div>
+              </>
+            )}
 
-          {projetoAberto === 'artePinturas' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> Arte Pinturas SC: Landing Page Responsiva</h3>
-              <div className="imagens-projeto">
-                <img src={arteTintasMob1} alt="Mobile" />
-                <img src={arteTintasMob2} alt="Mobile" />
-                <img src={arteTintasThumb} alt="Desktop" />
-                <img src={arteTintasDesk2} alt="Desktop" />
-              </div>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>React</li>
-                  <li>Vite</li>
-                  <li>HTML</li>
-                  <li>CSS Responsivo</li>
-                  <li>Vercel</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'artePinturas' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-pager"></i> {t.projetos.modal.artePinturas.titulo}</h3>
+                <div className="imagens-projeto">
+                  <img src={arteTintasMob1} alt="Mobile" />
+                  <img src={arteTintasMob2} alt="Mobile" />
+                  <img src={arteTintasThumb} alt="Desktop" />
+                  <img src={arteTintasDesk2} alt="Desktop" />
+                </div>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>React</li><li>Vite</li><li>HTML</li>
+                    <li>CSS Responsivo</li><li>Vercel</li>
+                  </ul>
+                </div>
+              </>
+            )}
 
-          {projetoAberto === 'Jessempadas' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-cart-shopping"></i> E-commerce Jess Empadas</h3>
-              <div className="imagens-projeto">
-                <img src={jessempadas2} alt="Versão Mobile" />
-                <img src={jessempadas3} alt="Painel Fornecedor" />
-                <img src={jessempadas1} alt="Versão Desktop" />
-              </div>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>Python</li>
-                  <li>Flask</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Docker</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'Jessempadas' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-cart-shopping"></i> {t.projetos.modal.jessempadas.titulo}</h3>
+                <div className="imagens-projeto">
+                  <img src={jessempadas2} alt="Versão Mobile" />
+                  <img src={jessempadas3} alt="Painel Fornecedor" />
+                  <img src={jessempadas1} alt="Versão Desktop" />
+                </div>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Python</li><li>Flask</li><li>HTML</li>
+                    <li>CSS</li><li>JavaScript</li><li>Docker</li><li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </>
+            )}
 
-          {projetoAberto === 'imoveis' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: Imóveis</h3>
-              <p className='paragrafopvd'>O sistema Imóveis é um projeto que visa auxiliar a PMRN (Polícia Militar do Rio Grande do Norte) no objetivo principal de facilitar o gerenciamento eficiente dos imóveis e OPMs (Organizações Policiais Militares) que estão sob posse ou administração da instituição.
-              </p>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>Python</li>
-                  <li>Flask</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Docker</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'imoveis' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> {t.projetos.modal.imoveis.titulo}</h3>
+                <p className='paragrafopvd'>{t.projetos.modal.imoveis.desc}</p>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Python</li><li>Flask</li><li>HTML</li>
+                    <li>CSS</li><li>JavaScript</li><li>Docker</li><li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </>
+            )}
 
-          {projetoAberto === 'rnsus' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: RN Sustentável</h3>
-              <p className='paragrafopvd'>O RN Sustentável é um sistema de levantamento de inventário, desenvolvido para atender uma demanda específica da 4ª Seção da PMRN para levantamento de informações sobre bens recebidos por doação do governo do estado mediante o programa em questão.
-              </p>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>Python</li>
-                  <li>Flask</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Docker</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'rnsus' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> {t.projetos.modal.rnsus.titulo}</h3>
+                <p className='paragrafopvd'>{t.projetos.modal.rnsus.desc}</p>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Python</li><li>Flask</li><li>HTML</li>
+                    <li>CSS</li><li>JavaScript</li><li>Docker</li><li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </>
+            )}
 
-          {projetoAberto === 'sigap' && (
-            <>
-              <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> Projeto Privado: SIGAP</h3>
-              <p className='paragrafopvd'>O SIGAP, Sistema de Gerenciamento de Armas Particulares, é um sistema utilizado pela PMRN para o controle e gerenciamento da compra e movimentação de armas de fogo particulares, sendo administrado pelos profissionais da SSMMB (Seção de Suprimento e Manutenção de Material Bélico).</p>
-              <div className="tecnologias-projeto">
-                <ul>
-                  <li>Node Js</li>
-                  <li>React</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Axios</li>
-                  <li>Docker</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-            </>
-          )}
+            {projetoAberto === 'sigap' && (
+              <>
+                <h3 className="titulo-detalhe"><i className="fa-solid fa-lock"></i> {t.projetos.modal.sigap.titulo}</h3>
+                <p className='paragrafopvd'>{t.projetos.modal.sigap.desc}</p>
+                <div className="tecnologias-projeto">
+                  <ul>
+                    <li>Node Js</li><li>React</li><li>HTML</li>
+                    <li>CSS</li><li>Axios</li><li>Docker</li><li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </>
+            )}
+          </div>
         </div>
-      </div>
-    )}
+      )}
     </main>
   );
 }
