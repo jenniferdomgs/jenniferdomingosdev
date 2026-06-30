@@ -21,45 +21,40 @@ const en = {
       { ano: 'March 2025', cargo: 'Finalist - Public Safety Hackathon (MJSP)', desc: 'I was a finalist in the first hackathon promoted by the Ministry of Justice and Public Safety, where I developed with my team EmergêncIA: a chatbot for incident reporting, placing 5th nationally.' }
     ]
   },
-  certificados: { titulo: 'Certificates' },
+  // ✅ Uma única definição com todos os campos
+  certificados: {
+    titulo: 'Certificates',
+    hackathon: 'Disruptive Technologies for Public Safety',
+    mjsp: 'Ministry of Justice and Public Safety',
+    cloudDevops: 'Cloud DevOps Immersion',
+    powerBI: 'Introduction to Data Analysis - Microsoft Power BI',
+  },
+  // ✅ Uma única definição com todos os campos
   projetos: {
     titulo: 'Projects',
     verProjeto: 'View Project',
     descricao: 'Description',
     privado: 'Private Project',
-    fechar: 'Close'
+    fechar: 'Close',
+    modal: {
+      emergencia: { titulo: 'EmergencIA: Incident Reporting Chatbot' },
+      artePinturas: { titulo: 'Arte Pinturas SC: Responsive Landing Page' },
+      jessempadas: { titulo: 'Jess Empadas E-commerce' },
+      imoveis: {
+        titulo: 'Private Project: Properties',
+        desc: 'The Properties system is a project designed to help the PMRN (Rio Grande do Norte Military Police) efficiently manage the properties and OPMs (Military Police Organizations) under the institution\'s possession or administration.'
+      },
+      rnsus: {
+        titulo: 'Private Project: RN Sustentável',
+        desc: 'RN Sustentável is an inventory survey system developed to meet a specific demand from the 4th Section of the PMRN, tracking information about assets received as donations from the state government through the program.'
+      },
+      sigap: {
+        titulo: 'Private Project: SIGAP',
+        desc: 'SIGAP, the Private Weapons Management System, is used by the PMRN to control and manage the purchase and movement of privately-owned firearms, administered by the SSMMB (Ammunition Supply and Maintenance Section).'
+      }
+    }
   },
   hero: { titulo: 'Software Developer', downloadCV: 'Download CV' },
   footer: { copyright: 'Jennifer\'s Portfolio', dev: 'Developed by' },
-  certificados: {
-  titulo: 'Certificates',
-  hackathon: 'Disruptive Technologies for Public Safety',
-  mjsp: 'Ministry of Justice and Public Safety',
-  cloudDevops: 'Cloud DevOps Immersion',
-  powerBI: 'Introduction to Data Analysis - Microsoft Power BI',
-    },
-    projetos: {
-    titulo: 'Projects',
-    verProjeto: 'View Project',
-    descricao: 'Description',
-    privado: 'Private Project',
-    modal: {
-        emergencia: { titulo: 'EmergencIA: Incident Reporting Chatbot' },
-        artePinturas: { titulo: 'Arte Pinturas SC: Responsive Landing Page' },
-        jessempadas: { titulo: 'Jess Empadas E-commerce' },
-        imoveis: {
-        titulo: 'Private Project: Properties',
-        desc: 'The Properties system is a project designed to help the PMRN (Rio Grande do Norte Military Police) efficiently manage the properties and OPMs (Military Police Organizations) under the institution\'s possession or administration.'
-        },
-        rnsus: {
-        titulo: 'Private Project: RN Sustentável',
-        desc: 'RN Sustentável is an inventory survey system developed to meet a specific demand from the 4th Section of the PMRN, tracking information about assets received as donations from the state government through the program.'
-        },
-        sigap: {
-        titulo: 'Private Project: SIGAP',
-        desc: 'SIGAP, the Private Weapons Management System, is used by the PMRN to control and manage the purchase and movement of privately-owned firearms, administered by the SSMMB (Ammunition Supply and Maintenance Section).'
-        }
-    }
-    },
 };
 export default en;

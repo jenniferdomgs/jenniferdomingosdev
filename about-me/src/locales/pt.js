@@ -21,46 +21,40 @@ const pt = {
       { ano: 'Março de 2025', cargo: 'Finalista - Hackathon Segurança Pública (MJSP)', desc: 'Fui finalista do primeiro hackathon promovido pelo Ministério da Justiça e Segurança Pública, onde desenvolvi junto com minha equipe o EmergêncIA: um chatbot para registro de ocorrências.' }
     ]
   },
-  certificados: { titulo: 'Certificados' },
+  // ✅ Uma única definição com todos os campos
+  certificados: {
+    titulo: 'Certificados',
+    hackathon: 'Tecnologias Disruptivas Segurança Pública',
+    mjsp: 'Ministério da Justiça e Segurança Pública',
+    cloudDevops: 'Imersão Cloud Devops',
+    powerBI: 'Introdução à Análise de Dados - Microsoft Power BI',
+  },
+  // ✅ Uma única definição com todos os campos
   projetos: {
     titulo: 'Projetos Realizados',
     verProjeto: 'Ver Projeto',
     descricao: 'Descrição',
     privado: 'Projeto Privado',
-    fechar: 'Fechar'
+    fechar: 'Fechar',
+    modal: {
+      emergencia: { titulo: 'EmergencIA: Chatbot para Registro de Ocorrências' },
+      artePinturas: { titulo: 'Arte Pinturas SC: Landing Page Responsiva' },
+      jessempadas: { titulo: 'E-commerce Jess Empadas' },
+      imoveis: {
+        titulo: 'Projeto Privado: Imóveis',
+        desc: 'O sistema Imóveis é um projeto que visa auxiliar a PMRN (Polícia Militar do Rio Grande do Norte) no objetivo principal de facilitar o gerenciamento eficiente dos imóveis e OPMs (Organizações Policiais Militares) que estão sob posse ou administração da instituição.'
+      },
+      rnsus: {
+        titulo: 'Projeto Privado: RN Sustentável',
+        desc: 'O RN Sustentável é um sistema de levantamento de inventário, desenvolvido para atender uma demanda específica da 4ª Seção da PMRN para levantamento de informações sobre bens recebidos por doação do governo do estado mediante o programa em questão.'
+      },
+      sigap: {
+        titulo: 'Projeto Privado: SIGAP',
+        desc: 'O SIGAP, Sistema de Gerenciamento de Armas Particulares, é um sistema utilizado pela PMRN para o controle e gerenciamento da compra e movimentação de armas de fogo particulares, sendo administrado pelos profissionais da SSMMB.'
+      }
+    }
   },
   hero: { titulo: 'Desenvolvedora de Software', downloadCV: 'Download CV' },
   footer: { copyright: 'Portifólio Jennifer', dev: 'Desenvolvido por' },
-
-  certificados: {
-  titulo: 'Certificados',
-  hackathon: 'Tecnologias Disruptivas Segurança Pública',
-  mjsp: 'Ministério da Justiça e Segurança Pública',
-  cloudDevops: 'Imersão Cloud Devops',
-  powerBI: 'Introdução à Análise de Dados - Microsoft Power BI',
-},
-    projetos: {
-    titulo: 'Projetos Realizados',
-    verProjeto: 'Ver Projeto',
-    descricao: 'Descrição',
-    privado: 'Projeto Privado',
-    modal: {
-        emergencia: { titulo: 'EmergencIA: Chatbot para Registro de Ocorrências' },
-        artePinturas: { titulo: 'Arte Pinturas SC: Landing Page Responsiva' },
-        jessempadas: { titulo: 'E-commerce Jess Empadas' },
-        imoveis: {
-        titulo: 'Projeto Privado: Imóveis',
-        desc: 'O sistema Imóveis é um projeto que visa auxiliar a PMRN (Polícia Militar do Rio Grande do Norte) no objetivo principal de facilitar o gerenciamento eficiente dos imóveis e OPMs (Organizações Policiais Militares) que estão sob posse ou administração da instituição.'
-        },
-        rnsus: {
-        titulo: 'Projeto Privado: RN Sustentável',
-        desc: 'O RN Sustentável é um sistema de levantamento de inventário, desenvolvido para atender uma demanda específica da 4ª Seção da PMRN para levantamento de informações sobre bens recebidos por doação do governo do estado mediante o programa em questão.'
-        },
-        sigap: {
-        titulo: 'Projeto Privado: SIGAP',
-        desc: 'O SIGAP, Sistema de Gerenciamento de Armas Particulares, é um sistema utilizado pela PMRN para o controle e gerenciamento da compra e movimentação de armas de fogo particulares, sendo administrado pelos profissionais da SSMMB.'
-        }
-    }
-    },
 };
 export default pt;
