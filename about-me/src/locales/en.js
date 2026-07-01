@@ -21,7 +21,6 @@ const en = {
       { ano: 'March 2025', cargo: 'Finalist - Public Safety Hackathon (MJSP)', desc: 'I was a finalist in the first hackathon promoted by the Ministry of Justice and Public Safety, where I developed with my team EmergêncIA: a chatbot for incident reporting, placing 5th nationally.' }
     ]
   },
-  // ✅ Uma única definição com todos os campos
   certificados: {
     titulo: 'Certificates',
     hackathon: 'Disruptive Technologies for Public Safety',
@@ -29,7 +28,6 @@ const en = {
     cloudDevops: 'Cloud DevOps Immersion',
     powerBI: 'Introduction to Data Analysis - Microsoft Power BI',
   },
-  // ✅ Uma única definição com todos os campos
   projetos: {
     titulo: 'Projects',
     verProjeto: 'View Project',

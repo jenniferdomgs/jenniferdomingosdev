@@ -21,7 +21,6 @@ const pt = {
       { ano: 'Março de 2025', cargo: 'Finalista - Hackathon Segurança Pública (MJSP)', desc: 'Fui finalista do primeiro hackathon promovido pelo Ministério da Justiça e Segurança Pública, onde desenvolvi junto com minha equipe o EmergêncIA: um chatbot para registro de ocorrências.' }
     ]
   },
-  // ✅ Uma única definição com todos os campos
   certificados: {
     titulo: 'Certificados',
     hackathon: 'Tecnologias Disruptivas Segurança Pública',
@@ -29,7 +28,6 @@ const pt = {
     cloudDevops: 'Imersão Cloud Devops',
     powerBI: 'Introdução à Análise de Dados - Microsoft Power BI',
   },
-  // ✅ Uma única definição com todos os campos
   projetos: {
     titulo: 'Projetos Realizados',
     verProjeto: 'Ver Projeto',
