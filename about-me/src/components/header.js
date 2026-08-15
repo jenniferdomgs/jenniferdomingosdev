@@ -83,7 +83,7 @@ function Header() {
           <div className="line"></div>
           <p className="hero-title">{displayedTitle}</p>
         </div>
-        <a href="/CV-Jennifer_Domingos-Dev.pdf" download className="btn-cv">
+        <a href="/CV-JenniferDomingos.docx.pdf" download className="btn-cv">
           <i className="fa-solid fa-download"></i> {t.hero.downloadCV}
         </a>
       </div>
